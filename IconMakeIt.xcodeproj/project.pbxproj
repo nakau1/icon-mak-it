@@ -8,6 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		CC5EED372857EB485DFF94DD /* Pods_IconMakeIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D026652D528C4A44F5C67DB0 /* Pods_IconMakeIt.framework */; };
+		DBA3A2A41E4AAD990016F8E1 /* ColorPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA3A2901E4AAD980016F8E1 /* ColorPicker.storyboard */; };
+		DBA3A2A51E4AAD990016F8E1 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA3A2911E4AAD980016F8E1 /* ColorPickerViewController.swift */; };
+		DBA3A2A61E4AAD990016F8E1 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA3A2931E4AAD980016F8E1 /* Detail.storyboard */; };
+		DBA3A2A71E4AAD990016F8E1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA3A2941E4AAD980016F8E1 /* DetailViewController.swift */; };
+		DBA3A2A81E4AAD990016F8E1 /* FixesSetting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA3A2961E4AAD980016F8E1 /* FixesSetting.storyboard */; };
+		DBA3A2A91E4AAD990016F8E1 /* FixesSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA3A2971E4AAD980016F8E1 /* FixesSettingViewController.swift */; };
+		DBA3A2AA1E4AAD990016F8E1 /* GoogleDrive.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA3A2991E4AAD980016F8E1 /* GoogleDrive.storyboard */; };
+		DBA3A2AB1E4AAD990016F8E1 /* GoogleDriveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA3A29A1E4AAD990016F8E1 /* GoogleDriveViewController.swift */; };
+		DBA3A2AC1E4AAD990016F8E1 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA3A29C1E4AAD990016F8E1 /* Setting.storyboard */; };
+		DBA3A2AD1E4AAD990016F8E1 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA3A29D1E4AAD990016F8E1 /* SettingViewController.swift */; };
+		DBA3A2AE1E4AAD990016F8E1 /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA3A29F1E4AAD990016F8E1 /* Tutorial.storyboard */; };
+		DBA3A2AF1E4AAD990016F8E1 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA3A2A01E4AAD990016F8E1 /* TutorialViewController.swift */; };
+		DBA3A2B01E4AAD990016F8E1 /* Web.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA3A2A21E4AAD990016F8E1 /* Web.storyboard */; };
+		DBA3A2B11E4AAD990016F8E1 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA3A2A31E4AAD990016F8E1 /* WebViewController.swift */; };
 		DBA97A261E4A90FD007CEED9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA97A241E4A90FD007CEED9 /* Main.storyboard */; };
 		DBA97A281E4A90FD007CEED9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBA97A271E4A90FD007CEED9 /* Assets.xcassets */; };
 		DBA97A2B1E4A90FD007CEED9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA97A291E4A90FD007CEED9 /* LaunchScreen.storyboard */; };
@@ -22,6 +36,20 @@
 		B1D857A2968FECAD336B0F02 /* Pods-IconMakeIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IconMakeIt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IconMakeIt/Pods-IconMakeIt.debug.xcconfig"; sourceTree = "<group>"; };
 		D026652D528C4A44F5C67DB0 /* Pods_IconMakeIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IconMakeIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3EA529A903E0FBE5B749005 /* Pods-IconMakeIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IconMakeIt.release.xcconfig"; path = "Pods/Target Support Files/Pods-IconMakeIt/Pods-IconMakeIt.release.xcconfig"; sourceTree = "<group>"; };
+		DBA3A2901E4AAD980016F8E1 /* ColorPicker.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ColorPicker.storyboard; sourceTree = "<group>"; };
+		DBA3A2911E4AAD980016F8E1 /* ColorPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
+		DBA3A2931E4AAD980016F8E1 /* Detail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		DBA3A2941E4AAD980016F8E1 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		DBA3A2961E4AAD980016F8E1 /* FixesSetting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FixesSetting.storyboard; sourceTree = "<group>"; };
+		DBA3A2971E4AAD980016F8E1 /* FixesSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FixesSettingViewController.swift; sourceTree = "<group>"; };
+		DBA3A2991E4AAD980016F8E1 /* GoogleDrive.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GoogleDrive.storyboard; sourceTree = "<group>"; };
+		DBA3A29A1E4AAD990016F8E1 /* GoogleDriveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleDriveViewController.swift; sourceTree = "<group>"; };
+		DBA3A29C1E4AAD990016F8E1 /* Setting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		DBA3A29D1E4AAD990016F8E1 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		DBA3A29F1E4AAD990016F8E1 /* Tutorial.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
+		DBA3A2A01E4AAD990016F8E1 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		DBA3A2A21E4AAD990016F8E1 /* Web.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Web.storyboard; sourceTree = "<group>"; };
+		DBA3A2A31E4AAD990016F8E1 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		DBA97A1D1E4A90FD007CEED9 /* IconMakeIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IconMakeIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBA97A251E4A90FD007CEED9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DBA97A271E4A90FD007CEED9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -61,6 +89,69 @@
 				D026652D528C4A44F5C67DB0 /* Pods_IconMakeIt.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DBA3A28F1E4AAD980016F8E1 /* ColorPicker */ = {
+			isa = PBXGroup;
+			children = (
+				DBA3A2901E4AAD980016F8E1 /* ColorPicker.storyboard */,
+				DBA3A2911E4AAD980016F8E1 /* ColorPickerViewController.swift */,
+			);
+			path = ColorPicker;
+			sourceTree = "<group>";
+		};
+		DBA3A2921E4AAD980016F8E1 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				DBA3A2931E4AAD980016F8E1 /* Detail.storyboard */,
+				DBA3A2941E4AAD980016F8E1 /* DetailViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		DBA3A2951E4AAD980016F8E1 /* FixesSetting */ = {
+			isa = PBXGroup;
+			children = (
+				DBA3A2961E4AAD980016F8E1 /* FixesSetting.storyboard */,
+				DBA3A2971E4AAD980016F8E1 /* FixesSettingViewController.swift */,
+			);
+			path = FixesSetting;
+			sourceTree = "<group>";
+		};
+		DBA3A2981E4AAD980016F8E1 /* GoogleDrive */ = {
+			isa = PBXGroup;
+			children = (
+				DBA3A2991E4AAD980016F8E1 /* GoogleDrive.storyboard */,
+				DBA3A29A1E4AAD990016F8E1 /* GoogleDriveViewController.swift */,
+			);
+			path = GoogleDrive;
+			sourceTree = "<group>";
+		};
+		DBA3A29B1E4AAD990016F8E1 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				DBA3A29C1E4AAD990016F8E1 /* Setting.storyboard */,
+				DBA3A29D1E4AAD990016F8E1 /* SettingViewController.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		DBA3A29E1E4AAD990016F8E1 /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				DBA3A29F1E4AAD990016F8E1 /* Tutorial.storyboard */,
+				DBA3A2A01E4AAD990016F8E1 /* TutorialViewController.swift */,
+			);
+			path = Tutorial;
+			sourceTree = "<group>";
+		};
+		DBA3A2A11E4AAD990016F8E1 /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				DBA3A2A21E4AAD990016F8E1 /* Web.storyboard */,
+				DBA3A2A31E4AAD990016F8E1 /* WebViewController.swift */,
+			);
+			path = Web;
 			sourceTree = "<group>";
 		};
 		DBA97A141E4A90FC007CEED9 = {
@@ -113,6 +204,13 @@
 			isa = PBXGroup;
 			children = (
 				DBA97A371E4A94E6007CEED9 /* List */,
+				DBA3A2921E4AAD980016F8E1 /* Detail */,
+				DBA3A28F1E4AAD980016F8E1 /* ColorPicker */,
+				DBA3A2951E4AAD980016F8E1 /* FixesSetting */,
+				DBA3A2981E4AAD980016F8E1 /* GoogleDrive */,
+				DBA3A29B1E4AAD990016F8E1 /* Setting */,
+				DBA3A29E1E4AAD990016F8E1 /* Tutorial */,
+				DBA3A2A11E4AAD990016F8E1 /* Web */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -217,10 +315,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBA3A2B01E4AAD990016F8E1 /* Web.storyboard in Resources */,
+				DBA3A2AE1E4AAD990016F8E1 /* Tutorial.storyboard in Resources */,
 				DBA97A2B1E4A90FD007CEED9 /* LaunchScreen.storyboard in Resources */,
 				DBA97A281E4A90FD007CEED9 /* Assets.xcassets in Resources */,
 				DBA97A421E4A94E6007CEED9 /* List.storyboard in Resources */,
+				DBA3A2A41E4AAD990016F8E1 /* ColorPicker.storyboard in Resources */,
+				DBA3A2AA1E4AAD990016F8E1 /* GoogleDrive.storyboard in Resources */,
+				DBA3A2AC1E4AAD990016F8E1 /* Setting.storyboard in Resources */,
 				DBA97A261E4A90FD007CEED9 /* Main.storyboard in Resources */,
+				DBA3A2A61E4AAD990016F8E1 /* Detail.storyboard in Resources */,
+				DBA3A2A81E4AAD990016F8E1 /* FixesSetting.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,8 +384,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBA3A2AB1E4AAD990016F8E1 /* GoogleDriveViewController.swift in Sources */,
+				DBA3A2B11E4AAD990016F8E1 /* WebViewController.swift in Sources */,
+				DBA3A2A51E4AAD990016F8E1 /* ColorPickerViewController.swift in Sources */,
+				DBA3A2AF1E4AAD990016F8E1 /* TutorialViewController.swift in Sources */,
 				DBA97A3F1E4A94E6007CEED9 /* App.swift in Sources */,
+				DBA3A2A91E4AAD990016F8E1 /* FixesSettingViewController.swift in Sources */,
 				DBA97A401E4A94E6007CEED9 /* AppDelegate.swift in Sources */,
+				DBA3A2AD1E4AAD990016F8E1 /* SettingViewController.swift in Sources */,
+				DBA3A2A71E4AAD990016F8E1 /* DetailViewController.swift in Sources */,
 				DBA97A411E4A94E6007CEED9 /* BootstrapViewController.swift in Sources */,
 				DBA97A431E4A94E6007CEED9 /* ListViewController.swift in Sources */,
 			);
