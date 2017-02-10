@@ -34,9 +34,12 @@ class BootstrapViewController: NBLandingViewController {
                     self.present(WebViewController.create())
                 },
                 ]),
-            (title:"画面", rows:[
-                NBLandingItem("一覧") {
-                    self.present(ListViewController.create())
+            (title:"テスト", rows:[
+                NBLandingItem("テスト") {
+                    Hud.show("どんなもんやー")
+                    asyncSleep(3) {
+                        Hud.hide()
+                    }
                 },
                 ]),
         ]

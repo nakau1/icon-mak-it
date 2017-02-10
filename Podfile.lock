@@ -11,7 +11,7 @@ PODS:
   - GTMSessionFetcher/Core (1.1.7)
   - GTMSessionFetcher/Full (1.1.7):
     - GTMSessionFetcher/Core (= 1.1.7)
-  - NeroBlu (2.0.1)
+  - NeroBlu (2.0.2)
   - SVProgressHUD (2.0.4)
 
 DEPENDENCIES:
@@ -26,14 +26,14 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   NeroBlu:
-    :commit: 5df6ce0cfea19fc5a40a4a9174197aab4707a129
+    :commit: cba0b118612261f321e8e8271d2c69a6bbd68cdf
     :git: https://github.com/nakau1/NeroBlu
 
 SPEC CHECKSUMS:
   GoogleAPIClient: 4a6b0b807de8b1115a2835180b25dd93dc60f1ea
   GTMOAuth2: 7fc9c10f5c745f4d9850419ea88889fe3baa6b7d
   GTMSessionFetcher: a1f8ed39e4fe21c68957daed472c7afbcdf29166
-  NeroBlu: 74c472220dd644f71c69aa3841eeeba9ce398014
+  NeroBlu: 71b2a15371d618788fb1e9c9fab72d9546075e46
   SVProgressHUD: bfde85ed6c573ea802b9cb37894ed9b629034f1b
 
 PODFILE CHECKSUM: 92c5e89e6c051bba70644fb2f653f6bcae5a5295
