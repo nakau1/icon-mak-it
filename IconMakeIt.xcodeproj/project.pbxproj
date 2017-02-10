@@ -25,9 +25,26 @@
 		DBA3A2CE1E4AB0BB0016F8E1 /* GoogleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA3A2C41E4AB0BB0016F8E1 /* GoogleAPI.swift */; };
 		DBA3A2CF1E4AB0BB0016F8E1 /* GoogleDrive.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA3A2C51E4AB0BB0016F8E1 /* GoogleDrive.swift */; };
 		DBA3A2D01E4AB0BB0016F8E1 /* IconFontSetGoogleMaterialDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA3A2C71E4AB0BB0016F8E1 /* IconFontSetGoogleMaterialDesign.swift */; };
-		DBA3A2D11E4AB0BB0016F8E1 /* IconFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA3A2C91E4AB0BB0016F8E1 /* IconFont.swift */; };
 		DBA3A2D21E4AB0BB0016F8E1 /* Hud.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA3A2CB1E4AB0BB0016F8E1 /* Hud.swift */; };
 		DBA3A2D31E4AB0BB0016F8E1 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA3A2CD1E4AB0BB0016F8E1 /* SliderView.swift */; };
+		DBA3A2E61E4CD86C0016F8E1 /* App+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA3A2DA1E4CD86C0016F8E1 /* App+Color.swift */; };
+		DBA3A2E71E4CD86C0016F8E1 /* App+Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA3A2DB1E4CD86C0016F8E1 /* App+Notification.swift */; };
+		DBA3A2E81E4CD86C0016F8E1 /* ColorChangeTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA3A2DC1E4CD86C0016F8E1 /* ColorChangeTarget.swift */; };
+		DBA3A2E91E4CD86C0016F8E1 /* ColorSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA3A2DD1E4CD86C0016F8E1 /* ColorSegment.swift */; };
+		DBA3A2EA1E4CD86C0016F8E1 /* FixMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA3A2DE1E4CD86C0016F8E1 /* FixMode.swift */; };
+		DBA3A2EB1E4CD86C0016F8E1 /* GenerateSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA3A2DF1E4CD86C0016F8E1 /* GenerateSizes.swift */; };
+		DBA3A2EC1E4CD86C0016F8E1 /* IconFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA3A2E01E4CD86C0016F8E1 /* IconFont.swift */; };
+		DBA3A2ED1E4CD86C0016F8E1 /* IconFontItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA3A2E11E4CD86C0016F8E1 /* IconFontItem.swift */; };
+		DBA3A2EE1E4CD86C0016F8E1 /* IconFontSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA3A2E21E4CD86C0016F8E1 /* IconFontSet.swift */; };
+		DBA3A2EF1E4CD86C0016F8E1 /* IconImageStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA3A2E31E4CD86C0016F8E1 /* IconImageStyle.swift */; };
+		DBA3A2F01E4CD86C0016F8E1 /* ImageSizeCandidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA3A2E41E4CD86C0016F8E1 /* ImageSizeCandidate.swift */; };
+		DBA3A2F11E4CD86C0016F8E1 /* ListTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA3A2E51E4CD86C0016F8E1 /* ListTheme.swift */; };
+		DBA3A2F81E4D60300016F8E1 /* IconFontSetFontAwasome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA3A2F21E4D60300016F8E1 /* IconFontSetFontAwasome.swift */; };
+		DBA3A2F91E4D60300016F8E1 /* IconFontSetFoundationIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA3A2F31E4D60300016F8E1 /* IconFontSetFoundationIcons.swift */; };
+		DBA3A2FA1E4D60300016F8E1 /* IconFontSetGenericons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA3A2F41E4D60300016F8E1 /* IconFontSetGenericons.swift */; };
+		DBA3A2FB1E4D60300016F8E1 /* IconFontSetLigatureSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA3A2F51E4D60300016F8E1 /* IconFontSetLigatureSymbols.swift */; };
+		DBA3A2FC1E4D60300016F8E1 /* IconFontSetTypicons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA3A2F61E4D60300016F8E1 /* IconFontSetTypicons.swift */; };
+		DBA3A2FD1E4D60300016F8E1 /* IconFontSetWebHostingHubGlyphs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA3A2F71E4D60300016F8E1 /* IconFontSetWebHostingHubGlyphs.swift */; };
 		DBA97A261E4A90FD007CEED9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA97A241E4A90FD007CEED9 /* Main.storyboard */; };
 		DBA97A281E4A90FD007CEED9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBA97A271E4A90FD007CEED9 /* Assets.xcassets */; };
 		DBA97A2B1E4A90FD007CEED9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA97A291E4A90FD007CEED9 /* LaunchScreen.storyboard */; };
@@ -59,9 +76,26 @@
 		DBA3A2C41E4AB0BB0016F8E1 /* GoogleAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAPI.swift; sourceTree = "<group>"; };
 		DBA3A2C51E4AB0BB0016F8E1 /* GoogleDrive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleDrive.swift; sourceTree = "<group>"; };
 		DBA3A2C71E4AB0BB0016F8E1 /* IconFontSetGoogleMaterialDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconFontSetGoogleMaterialDesign.swift; sourceTree = "<group>"; };
-		DBA3A2C91E4AB0BB0016F8E1 /* IconFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconFont.swift; sourceTree = "<group>"; };
 		DBA3A2CB1E4AB0BB0016F8E1 /* Hud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hud.swift; sourceTree = "<group>"; };
 		DBA3A2CD1E4AB0BB0016F8E1 /* SliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
+		DBA3A2DA1E4CD86C0016F8E1 /* App+Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "App+Color.swift"; sourceTree = "<group>"; };
+		DBA3A2DB1E4CD86C0016F8E1 /* App+Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "App+Notification.swift"; sourceTree = "<group>"; };
+		DBA3A2DC1E4CD86C0016F8E1 /* ColorChangeTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorChangeTarget.swift; sourceTree = "<group>"; };
+		DBA3A2DD1E4CD86C0016F8E1 /* ColorSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorSegment.swift; sourceTree = "<group>"; };
+		DBA3A2DE1E4CD86C0016F8E1 /* FixMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FixMode.swift; sourceTree = "<group>"; };
+		DBA3A2DF1E4CD86C0016F8E1 /* GenerateSizes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerateSizes.swift; sourceTree = "<group>"; };
+		DBA3A2E01E4CD86C0016F8E1 /* IconFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconFont.swift; sourceTree = "<group>"; };
+		DBA3A2E11E4CD86C0016F8E1 /* IconFontItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconFontItem.swift; sourceTree = "<group>"; };
+		DBA3A2E21E4CD86C0016F8E1 /* IconFontSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconFontSet.swift; sourceTree = "<group>"; };
+		DBA3A2E31E4CD86C0016F8E1 /* IconImageStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconImageStyle.swift; sourceTree = "<group>"; };
+		DBA3A2E41E4CD86C0016F8E1 /* ImageSizeCandidate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSizeCandidate.swift; sourceTree = "<group>"; };
+		DBA3A2E51E4CD86C0016F8E1 /* ListTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTheme.swift; sourceTree = "<group>"; };
+		DBA3A2F21E4D60300016F8E1 /* IconFontSetFontAwasome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconFontSetFontAwasome.swift; sourceTree = "<group>"; };
+		DBA3A2F31E4D60300016F8E1 /* IconFontSetFoundationIcons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconFontSetFoundationIcons.swift; sourceTree = "<group>"; };
+		DBA3A2F41E4D60300016F8E1 /* IconFontSetGenericons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconFontSetGenericons.swift; sourceTree = "<group>"; };
+		DBA3A2F51E4D60300016F8E1 /* IconFontSetLigatureSymbols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconFontSetLigatureSymbols.swift; sourceTree = "<group>"; };
+		DBA3A2F61E4D60300016F8E1 /* IconFontSetTypicons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconFontSetTypicons.swift; sourceTree = "<group>"; };
+		DBA3A2F71E4D60300016F8E1 /* IconFontSetWebHostingHubGlyphs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconFontSetWebHostingHubGlyphs.swift; sourceTree = "<group>"; };
 		DBA97A1D1E4A90FD007CEED9 /* IconMakeIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IconMakeIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBA97A251E4A90FD007CEED9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DBA97A271E4A90FD007CEED9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -179,6 +213,12 @@
 			isa = PBXGroup;
 			children = (
 				DBA3A2C71E4AB0BB0016F8E1 /* IconFontSetGoogleMaterialDesign.swift */,
+				DBA3A2F21E4D60300016F8E1 /* IconFontSetFontAwasome.swift */,
+				DBA3A2F31E4D60300016F8E1 /* IconFontSetFoundationIcons.swift */,
+				DBA3A2F41E4D60300016F8E1 /* IconFontSetGenericons.swift */,
+				DBA3A2F51E4D60300016F8E1 /* IconFontSetLigatureSymbols.swift */,
+				DBA3A2F61E4D60300016F8E1 /* IconFontSetTypicons.swift */,
+				DBA3A2F71E4D60300016F8E1 /* IconFontSetWebHostingHubGlyphs.swift */,
 			);
 			path = Icons;
 			sourceTree = "<group>";
@@ -186,7 +226,18 @@
 		DBA3A2C81E4AB0BB0016F8E1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				DBA3A2C91E4AB0BB0016F8E1 /* IconFont.swift */,
+				DBA3A2DA1E4CD86C0016F8E1 /* App+Color.swift */,
+				DBA3A2DB1E4CD86C0016F8E1 /* App+Notification.swift */,
+				DBA3A2DC1E4CD86C0016F8E1 /* ColorChangeTarget.swift */,
+				DBA3A2DD1E4CD86C0016F8E1 /* ColorSegment.swift */,
+				DBA3A2DE1E4CD86C0016F8E1 /* FixMode.swift */,
+				DBA3A2DF1E4CD86C0016F8E1 /* GenerateSizes.swift */,
+				DBA3A2E01E4CD86C0016F8E1 /* IconFont.swift */,
+				DBA3A2E11E4CD86C0016F8E1 /* IconFontItem.swift */,
+				DBA3A2E21E4CD86C0016F8E1 /* IconFontSet.swift */,
+				DBA3A2E31E4CD86C0016F8E1 /* IconImageStyle.swift */,
+				DBA3A2E41E4CD86C0016F8E1 /* ImageSizeCandidate.swift */,
+				DBA3A2E51E4CD86C0016F8E1 /* ListTheme.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -410,23 +461,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBA97A3F1E4A94E6007CEED9 /* App.swift in Sources */,
+				DBA3A2E61E4CD86C0016F8E1 /* App+Color.swift in Sources */,
+				DBA3A2FA1E4D60300016F8E1 /* IconFontSetGenericons.swift in Sources */,
+				DBA3A2FC1E4D60300016F8E1 /* IconFontSetTypicons.swift in Sources */,
+				DBA3A2E71E4CD86C0016F8E1 /* App+Notification.swift in Sources */,
 				DBA3A2D01E4AB0BB0016F8E1 /* IconFontSetGoogleMaterialDesign.swift in Sources */,
 				DBA3A2AB1E4AAD990016F8E1 /* GoogleDriveViewController.swift in Sources */,
+				DBA3A2EF1E4CD86C0016F8E1 /* IconImageStyle.swift in Sources */,
 				DBA3A2B11E4AAD990016F8E1 /* WebViewController.swift in Sources */,
 				DBA3A2A51E4AAD990016F8E1 /* ColorPickerViewController.swift in Sources */,
 				DBA3A2AF1E4AAD990016F8E1 /* TutorialViewController.swift in Sources */,
 				DBA3A2D21E4AB0BB0016F8E1 /* Hud.swift in Sources */,
-				DBA97A3F1E4A94E6007CEED9 /* App.swift in Sources */,
+				DBA3A2F01E4CD86C0016F8E1 /* ImageSizeCandidate.swift in Sources */,
 				DBA3A2A91E4AAD990016F8E1 /* FixesSettingViewController.swift in Sources */,
+				DBA3A2F91E4D60300016F8E1 /* IconFontSetFoundationIcons.swift in Sources */,
 				DBA97A401E4A94E6007CEED9 /* AppDelegate.swift in Sources */,
+				DBA3A2EA1E4CD86C0016F8E1 /* FixMode.swift in Sources */,
+				DBA3A2FD1E4D60300016F8E1 /* IconFontSetWebHostingHubGlyphs.swift in Sources */,
+				DBA3A2EE1E4CD86C0016F8E1 /* IconFontSet.swift in Sources */,
+				DBA3A2F11E4CD86C0016F8E1 /* ListTheme.swift in Sources */,
 				DBA3A2AD1E4AAD990016F8E1 /* SettingViewController.swift in Sources */,
+				DBA3A2ED1E4CD86C0016F8E1 /* IconFontItem.swift in Sources */,
+				DBA3A2E91E4CD86C0016F8E1 /* ColorSegment.swift in Sources */,
 				DBA3A2A71E4AAD990016F8E1 /* DetailViewController.swift in Sources */,
 				DBA3A2D31E4AB0BB0016F8E1 /* SliderView.swift in Sources */,
-				DBA3A2D11E4AB0BB0016F8E1 /* IconFont.swift in Sources */,
+				DBA3A2EC1E4CD86C0016F8E1 /* IconFont.swift in Sources */,
 				DBA3A2CE1E4AB0BB0016F8E1 /* GoogleAPI.swift in Sources */,
+				DBA3A2E81E4CD86C0016F8E1 /* ColorChangeTarget.swift in Sources */,
+				DBA3A2FB1E4D60300016F8E1 /* IconFontSetLigatureSymbols.swift in Sources */,
 				DBA3A2CF1E4AB0BB0016F8E1 /* GoogleDrive.swift in Sources */,
 				DBA97A411E4A94E6007CEED9 /* BootstrapViewController.swift in Sources */,
 				DBA97A431E4A94E6007CEED9 /* ListViewController.swift in Sources */,
+				DBA3A2F81E4D60300016F8E1 /* IconFontSetFontAwasome.swift in Sources */,
+				DBA3A2EB1E4CD86C0016F8E1 /* GenerateSizes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
