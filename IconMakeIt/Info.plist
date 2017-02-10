@@ -28,6 +28,16 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>GoogleMaterialDesign.ttf</string>
+		<string>Genericons.ttf</string>
+		<string>FoundationIcons.ttf</string>
+		<string>webhostinghub-glyphs.ttf</string>
+		<string>fontawesome-webfont.ttf</string>
+		<string>LigatureSymbols-2.11.ttf</string>
+		<string>typicons.ttf</string>
+	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

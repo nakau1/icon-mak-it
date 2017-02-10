@@ -45,6 +45,13 @@
 		DBA3A2FB1E4D60300016F8E1 /* IconFontSetLigatureSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA3A2F51E4D60300016F8E1 /* IconFontSetLigatureSymbols.swift */; };
 		DBA3A2FC1E4D60300016F8E1 /* IconFontSetTypicons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA3A2F61E4D60300016F8E1 /* IconFontSetTypicons.swift */; };
 		DBA3A2FD1E4D60300016F8E1 /* IconFontSetWebHostingHubGlyphs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA3A2F71E4D60300016F8E1 /* IconFontSetWebHostingHubGlyphs.swift */; };
+		DBA3A3061E4D6FC10016F8E1 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DBA3A2FF1E4D6FC10016F8E1 /* fontawesome-webfont.ttf */; };
+		DBA3A3071E4D6FC10016F8E1 /* FoundationIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DBA3A3001E4D6FC10016F8E1 /* FoundationIcons.ttf */; };
+		DBA3A3081E4D6FC10016F8E1 /* Genericons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DBA3A3011E4D6FC10016F8E1 /* Genericons.ttf */; };
+		DBA3A3091E4D6FC10016F8E1 /* GoogleMaterialDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DBA3A3021E4D6FC10016F8E1 /* GoogleMaterialDesign.ttf */; };
+		DBA3A30A1E4D6FC10016F8E1 /* LigatureSymbols-2.11.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DBA3A3031E4D6FC10016F8E1 /* LigatureSymbols-2.11.ttf */; };
+		DBA3A30B1E4D6FC10016F8E1 /* typicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DBA3A3041E4D6FC10016F8E1 /* typicons.ttf */; };
+		DBA3A30C1E4D6FC10016F8E1 /* webhostinghub-glyphs.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DBA3A3051E4D6FC10016F8E1 /* webhostinghub-glyphs.ttf */; };
 		DBA97A261E4A90FD007CEED9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA97A241E4A90FD007CEED9 /* Main.storyboard */; };
 		DBA97A281E4A90FD007CEED9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBA97A271E4A90FD007CEED9 /* Assets.xcassets */; };
 		DBA97A2B1E4A90FD007CEED9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA97A291E4A90FD007CEED9 /* LaunchScreen.storyboard */; };
@@ -96,6 +103,13 @@
 		DBA3A2F51E4D60300016F8E1 /* IconFontSetLigatureSymbols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconFontSetLigatureSymbols.swift; sourceTree = "<group>"; };
 		DBA3A2F61E4D60300016F8E1 /* IconFontSetTypicons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconFontSetTypicons.swift; sourceTree = "<group>"; };
 		DBA3A2F71E4D60300016F8E1 /* IconFontSetWebHostingHubGlyphs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconFontSetWebHostingHubGlyphs.swift; sourceTree = "<group>"; };
+		DBA3A2FF1E4D6FC10016F8E1 /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
+		DBA3A3001E4D6FC10016F8E1 /* FoundationIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FoundationIcons.ttf; sourceTree = "<group>"; };
+		DBA3A3011E4D6FC10016F8E1 /* Genericons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Genericons.ttf; sourceTree = "<group>"; };
+		DBA3A3021E4D6FC10016F8E1 /* GoogleMaterialDesign.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GoogleMaterialDesign.ttf; sourceTree = "<group>"; };
+		DBA3A3031E4D6FC10016F8E1 /* LigatureSymbols-2.11.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LigatureSymbols-2.11.ttf"; sourceTree = "<group>"; };
+		DBA3A3041E4D6FC10016F8E1 /* typicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = typicons.ttf; sourceTree = "<group>"; };
+		DBA3A3051E4D6FC10016F8E1 /* webhostinghub-glyphs.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "webhostinghub-glyphs.ttf"; sourceTree = "<group>"; };
 		DBA97A1D1E4A90FD007CEED9 /* IconMakeIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IconMakeIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBA97A251E4A90FD007CEED9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DBA97A271E4A90FD007CEED9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -212,6 +226,7 @@
 		DBA3A2C61E4AB0BB0016F8E1 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				DBA3A2FE1E4D6FC10016F8E1 /* Resources */,
 				DBA3A2C71E4AB0BB0016F8E1 /* IconFontSetGoogleMaterialDesign.swift */,
 				DBA3A2F21E4D60300016F8E1 /* IconFontSetFontAwasome.swift */,
 				DBA3A2F31E4D60300016F8E1 /* IconFontSetFoundationIcons.swift */,
@@ -256,6 +271,20 @@
 				DBA3A2CD1E4AB0BB0016F8E1 /* SliderView.swift */,
 			);
 			path = Widgets;
+			sourceTree = "<group>";
+		};
+		DBA3A2FE1E4D6FC10016F8E1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DBA3A2FF1E4D6FC10016F8E1 /* fontawesome-webfont.ttf */,
+				DBA3A3001E4D6FC10016F8E1 /* FoundationIcons.ttf */,
+				DBA3A3011E4D6FC10016F8E1 /* Genericons.ttf */,
+				DBA3A3021E4D6FC10016F8E1 /* GoogleMaterialDesign.ttf */,
+				DBA3A3031E4D6FC10016F8E1 /* LigatureSymbols-2.11.ttf */,
+				DBA3A3041E4D6FC10016F8E1 /* typicons.ttf */,
+				DBA3A3051E4D6FC10016F8E1 /* webhostinghub-glyphs.ttf */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		DBA97A141E4A90FC007CEED9 = {
@@ -392,17 +421,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBA3A3091E4D6FC10016F8E1 /* GoogleMaterialDesign.ttf in Resources */,
+				DBA3A30C1E4D6FC10016F8E1 /* webhostinghub-glyphs.ttf in Resources */,
 				DBA3A2B01E4AAD990016F8E1 /* Web.storyboard in Resources */,
 				DBA3A2AE1E4AAD990016F8E1 /* Tutorial.storyboard in Resources */,
 				DBA97A2B1E4A90FD007CEED9 /* LaunchScreen.storyboard in Resources */,
+				DBA3A30B1E4D6FC10016F8E1 /* typicons.ttf in Resources */,
 				DBA97A281E4A90FD007CEED9 /* Assets.xcassets in Resources */,
 				DBA97A421E4A94E6007CEED9 /* List.storyboard in Resources */,
 				DBA3A2A41E4AAD990016F8E1 /* ColorPicker.storyboard in Resources */,
+				DBA3A3071E4D6FC10016F8E1 /* FoundationIcons.ttf in Resources */,
 				DBA3A2AA1E4AAD990016F8E1 /* GoogleDrive.storyboard in Resources */,
+				DBA3A30A1E4D6FC10016F8E1 /* LigatureSymbols-2.11.ttf in Resources */,
 				DBA3A2AC1E4AAD990016F8E1 /* Setting.storyboard in Resources */,
 				DBA97A261E4A90FD007CEED9 /* Main.storyboard in Resources */,
+				DBA3A3061E4D6FC10016F8E1 /* fontawesome-webfont.ttf in Resources */,
 				DBA3A2A61E4AAD990016F8E1 /* Detail.storyboard in Resources */,
 				DBA3A2A81E4AAD990016F8E1 /* FixesSetting.storyboard in Resources */,
+				DBA3A3081E4D6FC10016F8E1 /* Genericons.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
