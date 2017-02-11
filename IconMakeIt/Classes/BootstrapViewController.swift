@@ -36,10 +36,8 @@ class BootstrapViewController: NBLandingViewController {
                 ]),
             (title:"テスト", rows:[
                 NBLandingItem("テスト") {
-                    Hud.show("どんなもんやー")
-                    asyncSleep(3) {
-                        Hud.hide()
-                    }
+                    print(App.Config.IconFont.current)
+                    App.Config.IconFont.current = .Genericons
                 },
                 ]),
         ]

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CC5EED372857EB485DFF94DD /* Pods_IconMakeIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D026652D528C4A44F5C67DB0 /* Pods_IconMakeIt.framework */; };
+		DB47BE8C1E4E9FF600923701 /* Config+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB47BE8A1E4E9FF600923701 /* Config+Color.swift */; };
+		DB47BE8D1E4E9FF600923701 /* Config+IconFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB47BE8B1E4E9FF600923701 /* Config+IconFont.swift */; };
 		DBA3A2A41E4AAD990016F8E1 /* ColorPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA3A2901E4AAD980016F8E1 /* ColorPicker.storyboard */; };
 		DBA3A2A51E4AAD990016F8E1 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA3A2911E4AAD980016F8E1 /* ColorPickerViewController.swift */; };
 		DBA3A2A61E4AAD990016F8E1 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA3A2931E4AAD980016F8E1 /* Detail.storyboard */; };
@@ -66,6 +68,8 @@
 		B1D857A2968FECAD336B0F02 /* Pods-IconMakeIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IconMakeIt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IconMakeIt/Pods-IconMakeIt.debug.xcconfig"; sourceTree = "<group>"; };
 		D026652D528C4A44F5C67DB0 /* Pods_IconMakeIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IconMakeIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3EA529A903E0FBE5B749005 /* Pods-IconMakeIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IconMakeIt.release.xcconfig"; path = "Pods/Target Support Files/Pods-IconMakeIt/Pods-IconMakeIt.release.xcconfig"; sourceTree = "<group>"; };
+		DB47BE8A1E4E9FF600923701 /* Config+Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Config+Color.swift"; sourceTree = "<group>"; };
+		DB47BE8B1E4E9FF600923701 /* Config+IconFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Config+IconFont.swift"; sourceTree = "<group>"; };
 		DBA3A2901E4AAD980016F8E1 /* ColorPicker.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ColorPicker.storyboard; sourceTree = "<group>"; };
 		DBA3A2911E4AAD980016F8E1 /* ColorPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
 		DBA3A2931E4AAD980016F8E1 /* Detail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
@@ -150,6 +154,15 @@
 				D026652D528C4A44F5C67DB0 /* Pods_IconMakeIt.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB47BE891E4E9FF600923701 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				DB47BE8A1E4E9FF600923701 /* Config+Color.swift */,
+				DB47BE8B1E4E9FF600923701 /* Config+IconFont.swift */,
+			);
+			path = Configs;
 			sourceTree = "<group>";
 		};
 		DBA3A28F1E4AAD980016F8E1 /* ColorPicker */ = {
@@ -242,6 +255,7 @@
 		DBA3A2C81E4AB0BB0016F8E1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DB47BE891E4E9FF600923701 /* Configs */,
 				DBA3A2DA1E4CD86C0016F8E1 /* App+Color.swift */,
 				DBA3A2DB1E4CD86C0016F8E1 /* App+Notification.swift */,
 				DBA3A2DC1E4CD86C0016F8E1 /* ColorChangeTarget.swift */,
@@ -511,11 +525,13 @@
 				DBA3A2B11E4AAD990016F8E1 /* WebViewController.swift in Sources */,
 				DBA3A2A51E4AAD990016F8E1 /* ColorPickerViewController.swift in Sources */,
 				DBA3A2AF1E4AAD990016F8E1 /* TutorialViewController.swift in Sources */,
+				DB47BE8C1E4E9FF600923701 /* Config+Color.swift in Sources */,
 				DBA3A2D21E4AB0BB0016F8E1 /* Hud.swift in Sources */,
 				DBA3A2F01E4CD86C0016F8E1 /* ImageSizeCandidate.swift in Sources */,
 				DBA3A2A91E4AAD990016F8E1 /* FixesSettingViewController.swift in Sources */,
 				DBA3A2F91E4D60300016F8E1 /* IconFontSetFoundationIcons.swift in Sources */,
 				DBA97A401E4A94E6007CEED9 /* AppDelegate.swift in Sources */,
+				DB47BE8D1E4E9FF600923701 /* Config+IconFont.swift in Sources */,
 				DBA3A2EA1E4CD86C0016F8E1 /* FixMode.swift in Sources */,
 				DBA3A2FD1E4D60300016F8E1 /* IconFontSetWebHostingHubGlyphs.swift in Sources */,
 				DBA3A2EE1E4CD86C0016F8E1 /* IconFontSet.swift in Sources */,

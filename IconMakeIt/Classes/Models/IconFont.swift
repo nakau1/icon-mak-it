@@ -5,7 +5,7 @@
 import UIKit
 import NeroBlu
 
-enum IconFont {
+enum IconFont: String {
     case GoogleMaterialDesign
     case Genericons
     case FoundationIcons
