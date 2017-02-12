@@ -14,8 +14,8 @@ enum ListTheme: Int {
     var iconColor: UIColor {
         return UIColor.blue
 //        switch self {
-//        case .default: return App.Color.DefaultIconColor.color()
-//        case .saved:   return App.Config.iconColor
+//        case .default: return App.Color.DefaultIconColor
+//        case .saved:   return App.Config.Color.iconColor
 //        }
     }
     

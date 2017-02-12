@@ -36,8 +36,8 @@ class BootstrapViewController: NBLandingViewController {
                 ]),
             (title:"テスト", rows:[
                 NBLandingItem("テスト") {
-                    print(App.Config.IconFont.current)
-                    App.Config.IconFont.current = .Genericons
+                    print(App.Config.Latest.iconFont)
+                    App.Config.Latest.iconFont = .Genericons
                 },
                 ]),
         ]
