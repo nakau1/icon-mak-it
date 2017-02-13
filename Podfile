@@ -8,6 +8,7 @@ target 'IconMakeIt' do
   pod 'NeroBlu', :git => 'https://github.com/nakau1/NeroBlu'
   pod 'GoogleAPIClient/Drive', '~> 1.0.2'
   pod 'GTMOAuth2', '~> 1.1.0'
+  pod 'GTMAppAuth'
   pod 'SVProgressHUD'
 
 end

@@ -40,6 +40,13 @@ class BootstrapViewController: NBLandingViewController {
                     App.Config.Latest.iconFont = .Genericons
                 },
                 ]),
+            (title:"Google", rows:[
+                NBLandingItem("認証画面") {
+                    App.Google.API.authenticate(self, handler: { (api, state) in
+                        
+                    })
+                },
+                ]),
         ]
     }
 }

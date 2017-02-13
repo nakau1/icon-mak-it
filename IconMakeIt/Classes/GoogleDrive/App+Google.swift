@@ -8,4 +8,5 @@ import NeroBlu
 // MARK: - App拡張 -
 extension App {
     
+    class Google {}
 }
