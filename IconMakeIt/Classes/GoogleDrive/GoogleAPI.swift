@@ -4,13 +4,14 @@
  */
 import UIKit
 import NeroBlu
-import GTMOAuth2
+import AppAuth
+import GTMAppAuth
 import GoogleAPIClient
 
 /// GoogleAPIの処理を行うクラス
-class GoogleAPI: NSObject, GoogleAPIAuthViewControllerDelegate {
+class GoogleAPI {
     
-    typealias AuthenticatedHandler = (GoogleAPI, GoogleAPIResultState) -> Void
+    typealias AuthorizedHandler = (GoogleAPIResultState) -> Void
     
     /// 認証されたメールアドレス
     private(set) var userEmail = ""
@@ -18,11 +19,13 @@ class GoogleAPI: NSObject, GoogleAPIAuthViewControllerDelegate {
     /// 認証情報
     private(set) var persistence = ""
     
-    private var oauth2: GTMOAuth2Authentication? = nil
+    private var authorizedHandler: AuthorizedHandler?
     
-    private var authenticatedHandler: AuthenticatedHandler?
+    private var authorization: GTMAppAuthFetcherAuthorization?
     
-    private var authViewController: GoogleAPIAuthViewController?
+    private var service = GTLServiceDrive()
+    
+    private let keychainName = "authorization"
     
     // MARK: - リクエスト送信
     
@@ -30,11 +33,10 @@ class GoogleAPI: NSObject, GoogleAPIAuthViewControllerDelegate {
     /// - parameter request: リクエストオブジェクト
     /// - parameter handler: レスポンスハンドラ
     func request<T: GoogleAPIRequest>(_ request: T, handler: @escaping (T.Response?, GoogleAPIResult) -> Void) {
-        
         let result = GoogleAPIResult()
         
         // 認証チェック
-        guard let authorizer = self.oauth2 else {
+        if !self.existsAuthorization() {
             result.state = .failed(Error("not authorized."))
             handler(nil, result)
             return
@@ -47,9 +49,7 @@ class GoogleAPI: NSObject, GoogleAPIAuthViewControllerDelegate {
             return
         }
         
-        let service = GTLServiceDrive()
-        service.authorizer = authorizer
-        request.processService(service).executeQuery(request.processQuery(query)) { ticket, res, error in
+        request.processService(self.service).executeQuery(request.processQuery(query)) { ticket, res, error in
             
             result.ticket = ticket
             
@@ -65,96 +65,105 @@ class GoogleAPI: NSObject, GoogleAPIAuthViewControllerDelegate {
         }
     }
     
+    /// キーチェーンから認証中のEmail
+    var authenticatedUserEmail: String? {
+        return ""
+    }
+    
     // MARK: - 認証
     
     /// 認証を行う
-    func authenticate(_ owner: UIViewController, handler: @escaping AuthenticatedHandler) {
-        self.authenticatedHandler = handler
+    /// - parameter viewController: ビューコントローラ
+    /// - parameter handler: 認証処理完了時ハンドラ
+    func authorize(_ viewController: UIViewController, handler: @escaping AuthorizedHandler) {
+        self.loadAuthorization()
         
-        guard
-            let keychainedOAuth2 = GTMOAuth2ViewControllerTouch.authForGoogleFromKeychain(
-                forName:      App.Google.Configure.KeychainItemName,
-                clientID:     App.Google.Configure.ClientID,
-                clientSecret: App.Google.Configure.ClientSecret
-            ),
-            let mail = keychainedOAuth2.userEmail,
-            let prs = keychainedOAuth2.persistenceResponseString()
-            else {
-                self.presentAuthViewController(owner)
-                return
+        if self.existsAuthorization() {
+            handler(.succeed)
+            return
         }
         
-        self.oauth2      = keychainedOAuth2
-        self.userEmail   = mail
-        self.persistence = prs
-        
-        handler(self, .succeed)
+        self.executeAuthorization(viewController) { state in
+            handler(state)
+        }
+    }
+    
+    private func executeAuthorization(_ viewController: UIViewController, handler: @escaping AuthorizedHandler) {
+        let issuer = URL(string: "https://accounts.google.com")
+        OIDAuthorizationService.discoverConfiguration(forIssuer: issuer!) { configuration, error in
+            guard let configuration = configuration else {
+                handler(.failed(Error("configuration not discovered")))
+                return
+            }
+            
+            let redirectURL = URL(string: "com.googleusercontent.apps.\(App.Google.Configure.ClientID):/oauthredirect")
+            let req = self.generateAuthorizationRequest(configuration, redirectURL!)
+            let app = UIApplication.shared.delegate as! AppDelegate
+            app.currentAuthorizationFlow = OIDAuthState.authState(byPresenting: req, presenting: viewController) { authState, error in
+                if let authState = authState {
+                    let auth = GTMAppAuthFetcherAuthorization(authState: authState)
+                    self.setAuthorization(auth)
+                    if self.existsAuthorization() {
+                        handler(.succeed)
+                    } else {
+                        handler(.failed(Error("")))
+                    }
+                } else {
+                    let err = (error as? NSError) ?? Error("unkonwn error.")
+                    self.setAuthorization(nil)
+                    handler(.failed(err))
+                }
+            }
+        }
     }
     
     /// 認証の解除を行う
-    func logoutAuthenticate() {
-        GTMOAuth2ViewControllerTouch.removeAuthFromKeychain(forName: App.Google.Configure.KeychainItemName)
+    func logoutAuthorization() {
+        GTMAppAuthFetcherAuthorization.removeFromKeychain(forName: self.keychainName)
     }
     
-    /// キーチェーンから認証中のEmail
-    var authenticatedUserEmail: String? {
-        let keychainedOAuth2 = GTMOAuth2ViewControllerTouch.authForGoogleFromKeychain(
-            forName:      App.Google.Configure.KeychainItemName,
-            clientID:     App.Google.Configure.ClientID,
-            clientSecret: App.Google.Configure.ClientSecret
+    private func setAuthorization(_ auth: GTMAppAuthFetcherAuthorization?) {
+        if self.authorization == auth {
+            return
+        }
+        self.authorization = auth
+        self.saveAuthorization()
+        self.service.authorizer = self.authorization
+    }
+    
+    private func saveAuthorization() {
+        if let auth = self.authorization {
+            if auth.canAuthorize() {
+                GTMAppAuthFetcherAuthorization.save(auth, toKeychainForName: self.keychainName)
+            } else {
+                GTMAppAuthFetcherAuthorization.removeFromKeychain(forName: self.keychainName)
+            }
+        } else {
+            GTMAppAuthFetcherAuthorization.removeFromKeychain(forName: self.keychainName)
+        }
+    }
+    
+    private func loadAuthorization() {
+        self.setAuthorization(GTMAppAuthFetcherAuthorization(fromKeychainForName: self.keychainName))
+    }
+    
+    private func existsAuthorization() -> Bool {
+        if let authorizer = self.service.authorizer, let canAuthorize = authorizer.canAuthorize {
+            return canAuthorize
+        }
+        return false
+    }
+    
+    private func generateAuthorizationRequest(_ configuration: OIDServiceConfiguration, _ redirectURL: URL) -> OIDAuthorizationRequest {
+        return  OIDAuthorizationRequest(
+            configuration:        configuration,
+            clientId:             App.Google.Configure.ClientID,
+            clientSecret:         App.Google.Configure.ClientSecret,
+            scopes:               [App.Google.Configure.Scope],
+            redirectURL:          redirectURL,
+            responseType:         OIDResponseTypeCode,
+            additionalParameters: nil
         )
-        return keychainedOAuth2?.userEmail
-    }
-    
-    // MARK: - 認証画面処理
-    
-    /// 認証画面を表示する
-    private func presentAuthViewController(_ owner: UIViewController) {
-        guard
-            let oauth2vc = GTMOAuth2ViewControllerTouch(
-                scope:            App.Google.Configure.Scope,
-                clientID:         App.Google.Configure.ClientID,
-                clientSecret:     App.Google.Configure.ClientSecret,
-                keychainItemName: App.Google.Configure.KeychainItemName,
-                completionHandler: { vc, auth, error in
-                    if let error = error {
-                        self.dismissAuthViewController(.failed(error as NSError))
-                        return
-                    }
-                    
-                    auth!.authorizeRequest(NSMutableURLRequest(url: (auth?.tokenURL)!)) { error in
-                        let state: GoogleAPIResultState
-                        if let error = error {
-                            state = .failed(error as NSError)
-                        } else {
-                            self.oauth2      = auth
-                            self.userEmail   = auth?.userEmail ?? ""
-                            self.persistence = auth?.persistenceResponseString() ?? ""
-                            state = .succeed
-                        }
-                        self.dismissAuthViewController(state)
-                    }
-            })
-            else {
-                return
-        }
-        self.authViewController = GoogleAPIAuthViewController(oauth2vc: oauth2vc, delegate: self)
-        owner.present(self.authViewController!)
-    }
-    
-    /// 認証画面を閉じる
-    private func dismissAuthViewController(_ state: GoogleAPIResultState) {
-        guard let vc = self.authViewController else { return }
-        
-        vc.dismiss {
-            self.authenticatedHandler?(self, state)
-            self.authViewController = nil
-        }
-    }
-    
-    /// 認証画面キャンセルボタン押下時
-    func googleAPIAuthViewControllerDidTapCancel(_ googleAPIAuthViewController: GoogleAPIAuthViewController) {
-        self.dismissAuthViewController(.cancelled)
     }
 }
 
@@ -163,5 +172,3 @@ extension App.Google {
     
     static let API = GoogleAPI()
 }
-
-

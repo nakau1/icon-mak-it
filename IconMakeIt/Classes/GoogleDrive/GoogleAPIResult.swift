@@ -8,15 +8,19 @@ import GoogleAPIClient
 
 // MARK: - GoogleAPIResult -
 
-class GoogleAPIResult: NSObject {
+class GoogleAPIResult {
     
     /// API結果ステータス
     var state = GoogleAPIResultState.none
+    
     /// チケットオブジェクト
     var ticket: GTLServiceTicket? = nil
+}
+
+extension GoogleAPIResult: CustomStringConvertible {
     
-    override var description: String {
-        var ret = " \(super.description) \(self.state) "
+    var description: String {
+        var ret = "\(self.state) "
         
         if let ticket = self.ticket {
             ret += "\(ticket.statusCode)"

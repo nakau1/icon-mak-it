@@ -42,9 +42,9 @@ class BootstrapViewController: NBLandingViewController {
                 ]),
             (title:"Google", rows:[
                 NBLandingItem("認証画面") {
-                    App.Google.API.authenticate(self, handler: { (api, state) in
+                    App.Google.API.authorize(self) { state in
                         
-                    })
+                    }
                 },
                 ]),
         ]
