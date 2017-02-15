@@ -12,19 +12,17 @@ enum ListTheme: Int {
     
     /// アイコンの色
     var iconColor: UIColor {
-        return UIColor.blue
-//        switch self {
-//        case .default: return App.Color.DefaultIconColor
-//        case .saved:   return App.Config.Color.iconColor
-//        }
+        switch self {
+        case .default: return App.Color.DefaultIconColor
+        case .saved:   return App.Config.ThemeColor.iconColor
+        }
     }
     
     /// 背景色
     var backgroundColor: UIColor {
-        return UIColor.red
-//        switch self {
-//        case .default: return App.Color.DefaultBackgroundColor.color()
-//        case .saved:   return App.Config.backgroundColor
-//        }
+        switch self {
+        case .default: return App.Color.DefaultBackgroundColor
+        case .saved:   return App.Config.ThemeColor.backgroundColor
+        }
     }
 }
