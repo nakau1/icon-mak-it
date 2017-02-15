@@ -11,9 +11,10 @@
 		DB47BE8C1E4E9FF600923701 /* Config+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB47BE8A1E4E9FF600923701 /* Config+Color.swift */; };
 		DB47BE8D1E4E9FF600923701 /* Config+Latest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB47BE8B1E4E9FF600923701 /* Config+Latest.swift */; };
 		DB47BE901E5062B900923701 /* Config+FileName.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB47BE8E1E5062B900923701 /* Config+FileName.swift */; };
-		DB47BE911E5062B900923701 /* Config+ImageStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB47BE8F1E5062B900923701 /* Config+ImageStyles.swift */; };
+		DB47BE911E5062B900923701 /* Config+Fixes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB47BE8F1E5062B900923701 /* Config+Fixes.swift */; };
 		DB47BE931E50636A00923701 /* Config+GoogleDrive.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB47BE921E50636A00923701 /* Config+GoogleDrive.swift */; };
 		DB47BE951E50E77300923701 /* Config+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB47BE941E50E77300923701 /* Config+Default.swift */; };
+		DB6A99BB1E52A7F200F022CC /* Config+ThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6A99BA1E52A7F200F022CC /* Config+ThemeColor.swift */; };
 		DBA3A2A41E4AAD990016F8E1 /* ColorPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA3A2901E4AAD980016F8E1 /* ColorPicker.storyboard */; };
 		DBA3A2A51E4AAD990016F8E1 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA3A2911E4AAD980016F8E1 /* ColorPickerViewController.swift */; };
 		DBA3A2A61E4AAD990016F8E1 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA3A2931E4AAD980016F8E1 /* Detail.storyboard */; };
@@ -80,9 +81,10 @@
 		DB47BE8A1E4E9FF600923701 /* Config+Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Config+Color.swift"; sourceTree = "<group>"; };
 		DB47BE8B1E4E9FF600923701 /* Config+Latest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Config+Latest.swift"; sourceTree = "<group>"; };
 		DB47BE8E1E5062B900923701 /* Config+FileName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Config+FileName.swift"; sourceTree = "<group>"; };
-		DB47BE8F1E5062B900923701 /* Config+ImageStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Config+ImageStyles.swift"; sourceTree = "<group>"; };
+		DB47BE8F1E5062B900923701 /* Config+Fixes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Config+Fixes.swift"; sourceTree = "<group>"; };
 		DB47BE921E50636A00923701 /* Config+GoogleDrive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Config+GoogleDrive.swift"; sourceTree = "<group>"; };
 		DB47BE941E50E77300923701 /* Config+Default.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Config+Default.swift"; sourceTree = "<group>"; };
+		DB6A99BA1E52A7F200F022CC /* Config+ThemeColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Config+ThemeColor.swift"; sourceTree = "<group>"; };
 		DBA3A2901E4AAD980016F8E1 /* ColorPicker.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ColorPicker.storyboard; sourceTree = "<group>"; };
 		DBA3A2911E4AAD980016F8E1 /* ColorPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
 		DBA3A2931E4AAD980016F8E1 /* Detail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
@@ -181,7 +183,8 @@
 				DB47BE8A1E4E9FF600923701 /* Config+Color.swift */,
 				DB47BE8B1E4E9FF600923701 /* Config+Latest.swift */,
 				DB47BE8E1E5062B900923701 /* Config+FileName.swift */,
-				DB47BE8F1E5062B900923701 /* Config+ImageStyles.swift */,
+				DB47BE8F1E5062B900923701 /* Config+Fixes.swift */,
+				DB6A99BA1E52A7F200F022CC /* Config+ThemeColor.swift */,
 				DB47BE921E50636A00923701 /* Config+GoogleDrive.swift */,
 			);
 			path = Configs;
@@ -546,6 +549,7 @@
 				DBA3A2E61E4CD86C0016F8E1 /* App+Color.swift in Sources */,
 				DBA8448F1E51575900A7227A /* GoogleAPIResult.swift in Sources */,
 				DBA3A2FA1E4D60300016F8E1 /* IconFontSetGenericons.swift in Sources */,
+				DB6A99BB1E52A7F200F022CC /* Config+ThemeColor.swift in Sources */,
 				DB47BE931E50636A00923701 /* Config+GoogleDrive.swift in Sources */,
 				DBA3A2FC1E4D60300016F8E1 /* IconFontSetTypicons.swift in Sources */,
 				DBA3A2E71E4CD86C0016F8E1 /* App+Notification.swift in Sources */,
@@ -556,7 +560,7 @@
 				DBA8448D1E51572200A7227A /* GoogleAPIResultState.swift in Sources */,
 				DBA3A2A51E4AAD990016F8E1 /* ColorPickerViewController.swift in Sources */,
 				DBA3A2AF1E4AAD990016F8E1 /* TutorialViewController.swift in Sources */,
-				DB47BE911E5062B900923701 /* Config+ImageStyles.swift in Sources */,
+				DB47BE911E5062B900923701 /* Config+Fixes.swift in Sources */,
 				DB47BE951E50E77300923701 /* Config+Default.swift in Sources */,
 				DB47BE8C1E4E9FF600923701 /* Config+Color.swift in Sources */,
 				DBA3A2D21E4AB0BB0016F8E1 /* Hud.swift in Sources */,
