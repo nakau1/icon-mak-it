@@ -31,7 +31,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="NYC-rh-Fna" customClass="ListViewControllerCell" customModule="IconMakeIt" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="NYC-rh-Fna" customClass="ListCollectionViewCell" customModule="IconMakeIt" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -75,6 +75,9 @@
                                             <constraint firstAttribute="width" constant="44" id="iil-dT-DgB"/>
                                         </constraints>
                                         <state key="normal" image="btn_setting"/>
+                                        <connections>
+                                            <action selector="didTapSettingButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="D7d-Fa-Cia"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJr-sU-JfA">
                                         <rect key="frame" x="276" y="0.0" width="44" height="44"/>
@@ -83,6 +86,9 @@
                                             <constraint firstAttribute="height" constant="44" id="z4i-Ep-5h0"/>
                                         </constraints>
                                         <state key="normal" image="btn_reverse"/>
+                                        <connections>
+                                            <action selector="didTapChangeThemeButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Ga-ro-LgV"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -109,6 +115,9 @@
                             <constraint firstItem="O74-1p-ZyD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qKH-PO-7pt"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="4aK-3p-Ea4" id="Ek7-vE-7dx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
