@@ -85,7 +85,7 @@ class DetailViewController: UIViewController {
     
     /// ファイル名変更時
     @IBAction private func didEditChangeFileNameTextField() {
-        
+        self.updateGenerateButton()
     }
     
     /// カラー設定のセグメント変更時
@@ -158,7 +158,10 @@ extension DetailViewController: UITextFieldDelegate {
     
     /// ファイル名のセットアップ
     fileprivate func setupFileName() {
+        let text = App.Config.Default.shouldUseLatestFileName ? App.Config.Latest.fileName : self.item.name
+        self.fileName = text
         
+        self.fileNameTextField.delegate = self
     }
     
     /// ファイル名
@@ -166,116 +169,20 @@ extension DetailViewController: UITextFieldDelegate {
         get { return self.fileNameTextField.text ?? "" }
         set(v) {
             self.fileNameTextField.text = v
+            self.updateGenerateButton()
         }
     }
     
     /// ファイル名(プレフィックスとサフィックスを含めたフルネーム)
     fileprivate var fileFullName: String {
-        return ""
+        return "\(self.prefix)\(self.fileName)\(self.suffix)".trim(.whitespacesAndNewlines)
     }
     
-    
-    //let fullName = ("\(self.prefix)\(self.fileName)\(self.suffix)" as NSString).trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
-    
-    
-//    fileprivate var fileName = "" {
-//        didSet { let v = self.fileName
-////            self.fileNameTextField.text = v
-////            self.validate()
-//        }
-//    }
-    
-    /*
-    /// ファイル名のセットアップ
-    fileprivate func setupFileName() {
-//        self.prefix = App.Config.latestPrefix
-//        self.suffix = App.Config.latestSuffix
-//        
-//        let text = App.Config.shouldUseLatestFileName ? App.Config.latestFileName : self.iconFontItem.name
-//        self.fileName = text
-    }
-    
-    /// ファイル名
-    fileprivate var fileName = "" {
-        didSet { let v = self.fileName
-            self.fileNameTextField.text = v
-            self.validate()
-        }
-    }
-    
-    
-    
-    /// アイコンラベルのセットアップ
-    fileprivate func setupIconLabel() {
-        self.iconLabel.font = App.Config.iconFont.set.font(self.iconLabel.font.pointSize)
-        self.iconLabel.text = self.iconFontItem.text
-    }
-    
-    // MARK: ファイル名
-    
-    /// プレフィクス
-    fileprivate var prefix = "" {
-        didSet { let v = self.prefix
-            self.setFixesButtonTitle(self.prefixButton, text: v)
-            App.Config.latestPrefix = v
-            self.validate()
-        }
-    }
-    
-    /// サフィックス
-    fileprivate var suffix = "" {
-        didSet { let v = self.suffix
-            self.setFixesButtonTitle(self.suffixButton, text: v)
-            App.Config.latestSuffix = v
-            self.validate()
-        }
-    }
-    
-    /// ファイル名
-    fileprivate var fileName = "" {
-        didSet { let v = self.fileName
-            self.fileNameTextField.text = v
-            self.validate()
-        }
-    }
-    
-    /// ファイル名のセットアップ
-    fileprivate func setupFileName() {
-        self.prefix = App.Config.latestPrefix
-        self.suffix = App.Config.latestSuffix
-        
-        let text = App.Config.shouldUseLatestFileName ? App.Config.latestFileName : self.iconFontItem.name
-        self.fileName = text
-    }
-    
-
-    
-    /// プレフィクス/サフィックス選択用のアクションシートを表示する
-    /// - parameter items: 選択肢の文字列配列
-    /// - parameter selected: 選択時の処理
-    fileprivate func showSelectActionSheet(_ items: [String], selected: @escaping (String) -> Void) {
-        let vc = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        for item in items {
-            let action = UIAlertAction(title: item, style: .default) { _ in
-                selected(item)
-            }
-            vc.addAction(action)
-        }
-        self.present(vc, animated: true, completion: nil)
-    }
-    
-     
     /// キーボードリターンキー押下時
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
-    
-    /// ファイル名変更時
-    @IBAction fileprivate func textFieldDidEditChange(_ textField: UITextField) {
-        self.fileName = textField.text ?? ""
-    }
-    */
 }
 
 // MARK: - プレフィックス / サフィックス -
