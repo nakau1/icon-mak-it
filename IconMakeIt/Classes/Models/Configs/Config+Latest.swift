@@ -21,6 +21,10 @@ fileprivate class LatestConfigRaw: NBUserDefaults {
     dynamic var listTheme: Int = ListTheme.saved.rawValue
     
     dynamic var imageSizeCandidate: Int = ImageSizeCandidate.many.rawValue
+    
+    dynamic var prefix = "btn_"
+    
+    dynamic var suffix = ""
 }
 
 // MARK: - LatestConfig -
@@ -69,6 +73,18 @@ class LatestConfig {
     var imageSizeCandidate: ImageSizeCandidate {
         get    { return ImageSizeCandidate(rawValue: self.raw.imageSizeCandidate)! }
         set(v) { self.raw.imageSizeCandidate = v.rawValue}
+    }
+    
+    /// プレフィックス
+    var prefix: String {
+        get    { return self.raw.prefix }
+        set(v) { self.raw.prefix = v}
+    }
+    
+    /// サフィックス
+    var suffix: String {
+        get    { return self.raw.suffix }
+        set(v) { self.raw.suffix = v}
     }
 }
 

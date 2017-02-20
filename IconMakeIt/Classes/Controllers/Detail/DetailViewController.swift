@@ -42,6 +42,7 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         self.setupIconLabel()
         self.setupFileName()
+        self.setupFixes()
         self.setupColorComponents()
         self.setupSizeComponents()
         self.observeNotification(true)
@@ -280,16 +281,29 @@ extension DetailViewController: UITextFieldDelegate {
 // MARK: - プレフィックス / サフィックス -
 extension DetailViewController {
     
+    fileprivate func setupFixes() {
+        self.prefix = App.Config.Latest.prefix
+        self.suffix = App.Config.Latest.suffix
+    }
+    
     /// プレフィックス
     fileprivate var prefix: String {
-        get    { return self.buttonTitle(fix: .prefix) }
-        set(v) { self.setButtonTitle(v, fix: .prefix) }
+        get { return self.buttonTitle(fix: .prefix) }
+        set(v) {
+            self.setButtonTitle(v, fix: .prefix)
+            App.Config.Latest.prefix = v
+            self.updateGenerateButton()
+        }
     }
     
     /// サフィックス
     fileprivate var suffix: String {
-        get    { return self.buttonTitle(fix: .suffix) }
-        set(v) { self.setButtonTitle(v, fix: .suffix) }
+        get { return self.buttonTitle(fix: .suffix) }
+        set(v) {
+            self.setButtonTitle(v, fix: .suffix)
+            App.Config.Latest.suffix = v
+            self.updateGenerateButton()
+        }
     }
     
     /// ボタンのタイトルを取得する
