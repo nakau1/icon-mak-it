@@ -3,6 +3,8 @@
 
 target 'IconMakeIt' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  # cd ~/Desktop/MyApp/IconMakIt
+  # pod install --verbose
   use_frameworks!
   
   pod 'NeroBlu', :git => 'https://github.com/nakau1/NeroBlu'
