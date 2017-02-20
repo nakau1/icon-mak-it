@@ -31,6 +31,9 @@
                                             <constraint firstAttribute="height" constant="44" id="gSf-gW-Xkl"/>
                                         </constraints>
                                         <state key="normal" image="btn_close"/>
+                                        <connections>
+                                            <action selector="didTapCloseButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="FPh-3c-M8n"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.94696140289999997" green="0.97726607320000003" blue="0.97636616229999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -66,6 +69,9 @@
                                 <state key="normal" title="btn_">
                                     <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTapPrefixButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="bV1-PG-RGm"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" COLOR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PtM-iT-HLg">
                                 <rect key="frame" x="0.0" y="272" width="320" height="22"/>
@@ -111,6 +117,9 @@
                                     <segment title="Preset"/>
                                 </segments>
                                 <color key="tintColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="didChangeColorSegment" destination="BYZ-38-t0r" eventType="valueChanged" id="rKa-0Q-D4O"/>
+                                </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QPR-HH-tos">
                                 <rect key="frame" x="170" y="382" width="150" height="44"/>
@@ -122,6 +131,9 @@
                                 <state key="normal" title="#FFFFFF">
                                     <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTapColorButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="w5n-Qg-y9t"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" SIZE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3l-X9-jex">
                                 <rect key="frame" x="0.0" y="434" width="320" height="22"/>
@@ -146,6 +158,9 @@
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="0.0" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="xXP-oN-D6y">
                                 <rect key="frame" x="106" y="456" width="208" height="45"/>
                                 <color key="minimumTrackTintColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="didChangeSizeSlider" destination="BYZ-38-t0r" eventType="valueChanged" id="c3A-lS-g9I"/>
+                                </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yHT-oK-hbi">
                                 <rect key="frame" x="8" y="154" width="44" height="44"/>
@@ -155,6 +170,9 @@
                                 </constraints>
                                 <state key="normal" image="btn_icon_color"/>
                                 <state key="selected" image="btn_background_color"/>
+                                <connections>
+                                    <action selector="didTapColorChangeTargetButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZEQ-Z5-rgd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGa-wY-pzd">
                                 <rect key="frame" x="8" y="508" width="304" height="52"/>
@@ -166,6 +184,9 @@
                                 <state key="normal" title="Generate">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTapGenerateButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZlN-5a-gzf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YPr-tz-7e5">
                                 <rect key="frame" x="268" y="154" width="44" height="44"/>
@@ -180,6 +201,9 @@
                                 <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="didEditChangeFileNameTextField" destination="BYZ-38-t0r" eventType="editingChanged" id="aLV-tn-Mmk"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJw-af-RvI">
                                 <rect key="frame" x="179" y="228" width="32" height="44"/>
@@ -187,6 +211,9 @@
                                 <state key="normal" title="_on">
                                     <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTapSuffixButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="L65-qc-ecZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -239,6 +266,21 @@
                             <constraint firstItem="0ey-8Y-X1F" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="zzy-3W-kVm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="colorButton" destination="QPR-HH-tos" id="g30-Wv-sFw"/>
+                        <outlet property="colorCaptionLabel" destination="PtM-iT-HLg" id="SxR-Kr-tnd"/>
+                        <outlet property="colorChangeTargetButton" destination="yHT-oK-hbi" id="uE3-W8-vwj"/>
+                        <outlet property="colorCollectionView" destination="jJ1-QS-dmu" id="hT0-rR-CtR"/>
+                        <outlet property="colorSegments" destination="oA2-Yi-fIM" id="SWB-Eg-hrK"/>
+                        <outlet property="fileNameTextField" destination="sVT-G4-62H" id="lgp-P3-mND"/>
+                        <outlet property="generateButton" destination="gGa-wY-pzd" id="7jh-Yp-4oK"/>
+                        <outlet property="headerView" destination="0ey-8Y-X1F" id="sDV-qQ-OPK"/>
+                        <outlet property="iconLabel" destination="GbU-mx-IwV" id="t5e-Dt-c43"/>
+                        <outlet property="prefixButton" destination="agt-OE-SRl" id="zYS-nI-ft2"/>
+                        <outlet property="sizeLabel" destination="da7-fy-nFy" id="K3C-qL-cgq"/>
+                        <outlet property="sizeSlider" destination="xXP-oN-D6y" id="Qnc-3M-KhX"/>
+                        <outlet property="suffixButton" destination="YJw-af-RvI" id="lg6-Sf-rAv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -5,6 +5,8 @@
 import UIKit
 import NeroBlu
 
+// MARK: - ListViewController -
+
 /// 一覧画面コントローラ
 class ListViewController: UIViewController {
     
@@ -26,7 +28,7 @@ class ListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.adapter = ListCollectionViewController(selectedHandler: { [unowned self] item in
-            self.adapter!.reload()
+            self.present(DetailViewController.create(item: item))
         })
         self.adapter!.setup(collectionView)
         self.observeNotification(true)
