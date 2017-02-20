@@ -25,6 +25,8 @@ fileprivate class LatestConfigRaw: NBUserDefaults {
     dynamic var prefix = "btn_"
     
     dynamic var suffix = ""
+    
+    dynamic var fileName = ""
 }
 
 // MARK: - LatestConfig -
@@ -85,6 +87,12 @@ class LatestConfig {
     var suffix: String {
         get    { return self.raw.suffix }
         set(v) { self.raw.suffix = v}
+    }
+    
+    /// ファイル名
+    var fileName: String {
+        get    { return self.raw.fileName }
+        set(v) { self.raw.fileName = v}
     }
 }
 

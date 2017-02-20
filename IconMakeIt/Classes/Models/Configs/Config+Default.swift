@@ -15,6 +15,9 @@ class DefaultConfig: NBUserDefaults {
     
     /// 初回起動かどうか
     dynamic var isFirstLaunch = true
+    
+    /// 最後のファイル名を保存するかどうか
+    dynamic var shouldUseLatestFileName = false
 }
 
 // MARK: - App拡張 -

@@ -10,7 +10,6 @@
 		CC5EED372857EB485DFF94DD /* Pods_IconMakeIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D026652D528C4A44F5C67DB0 /* Pods_IconMakeIt.framework */; };
 		DB47BE8C1E4E9FF600923701 /* Config+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB47BE8A1E4E9FF600923701 /* Config+Color.swift */; };
 		DB47BE8D1E4E9FF600923701 /* Config+Latest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB47BE8B1E4E9FF600923701 /* Config+Latest.swift */; };
-		DB47BE901E5062B900923701 /* Config+FileName.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB47BE8E1E5062B900923701 /* Config+FileName.swift */; };
 		DB47BE911E5062B900923701 /* Config+Fixes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB47BE8F1E5062B900923701 /* Config+Fixes.swift */; };
 		DB47BE931E50636A00923701 /* Config+GoogleDrive.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB47BE921E50636A00923701 /* Config+GoogleDrive.swift */; };
 		DB47BE951E50E77300923701 /* Config+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB47BE941E50E77300923701 /* Config+Default.swift */; };
@@ -80,7 +79,6 @@
 		D3EA529A903E0FBE5B749005 /* Pods-IconMakeIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IconMakeIt.release.xcconfig"; path = "Pods/Target Support Files/Pods-IconMakeIt/Pods-IconMakeIt.release.xcconfig"; sourceTree = "<group>"; };
 		DB47BE8A1E4E9FF600923701 /* Config+Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Config+Color.swift"; sourceTree = "<group>"; };
 		DB47BE8B1E4E9FF600923701 /* Config+Latest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Config+Latest.swift"; sourceTree = "<group>"; };
-		DB47BE8E1E5062B900923701 /* Config+FileName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Config+FileName.swift"; sourceTree = "<group>"; };
 		DB47BE8F1E5062B900923701 /* Config+Fixes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Config+Fixes.swift"; sourceTree = "<group>"; };
 		DB47BE921E50636A00923701 /* Config+GoogleDrive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Config+GoogleDrive.swift"; sourceTree = "<group>"; };
 		DB47BE941E50E77300923701 /* Config+Default.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Config+Default.swift"; sourceTree = "<group>"; };
@@ -182,7 +180,6 @@
 				DB47BE941E50E77300923701 /* Config+Default.swift */,
 				DB47BE8A1E4E9FF600923701 /* Config+Color.swift */,
 				DB47BE8B1E4E9FF600923701 /* Config+Latest.swift */,
-				DB47BE8E1E5062B900923701 /* Config+FileName.swift */,
 				DB47BE8F1E5062B900923701 /* Config+Fixes.swift */,
 				DB6A99BA1E52A7F200F022CC /* Config+ThemeColor.swift */,
 				DB47BE921E50636A00923701 /* Config+GoogleDrive.swift */,
@@ -567,7 +564,6 @@
 				DBA3A2F01E4CD86C0016F8E1 /* ImageSizeCandidate.swift in Sources */,
 				DBA844931E51712400A7227A /* GoogleAPIConfigure.swift in Sources */,
 				DBA3A2A91E4AAD990016F8E1 /* FixesSettingViewController.swift in Sources */,
-				DB47BE901E5062B900923701 /* Config+FileName.swift in Sources */,
 				DBA8448B1E51567B00A7227A /* GoogleAPIRequest.swift in Sources */,
 				DBA3A2F91E4D60300016F8E1 /* IconFontSetFoundationIcons.swift in Sources */,
 				DBA97A401E4A94E6007CEED9 /* AppDelegate.swift in Sources */,
