@@ -27,6 +27,8 @@ fileprivate class LatestConfigRaw: NBUserDefaults {
     dynamic var suffix = ""
     
     dynamic var fileName = ""
+    
+    dynamic var imageSize = 44
 }
 
 // MARK: - LatestConfig -
@@ -93,6 +95,12 @@ class LatestConfig {
     var fileName: String {
         get    { return self.raw.fileName }
         set(v) { self.raw.fileName = v}
+    }
+    
+    /// 画像サイズ
+    var imageSize: Int {
+        get    { return self.raw.imageSize }
+        set(v) { self.raw.imageSize = v}
     }
 }
 

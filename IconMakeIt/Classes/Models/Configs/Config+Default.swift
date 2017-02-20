@@ -10,9 +10,6 @@ import NeroBlu
 /// 永続保存データクラス
 class DefaultConfig: NBUserDefaults {
     
-    /// 最後に入力していた画像サイズ
-    dynamic var latestImageSize = 44
-    
     /// 初回起動かどうか
     dynamic var isFirstLaunch = true
     

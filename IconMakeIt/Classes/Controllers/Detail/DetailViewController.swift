@@ -52,7 +52,7 @@ class DetailViewController: UIViewController {
         self.observeNotification(false)
     }
     
-    // MARK: ボタンイベント
+    // MARK: - ボタンイベント
     
     /// 閉じるボタン押下時
     @IBAction private func didTapCloseButton() {
@@ -100,7 +100,7 @@ class DetailViewController: UIViewController {
     
     /// サイズスライダー変更時
     @IBAction private func didChangeSizeSlider() {
-        
+        self.currentSizeIndex = self.sizeSlider.value.int
     }
         
     /// 生成ボタン押下時
@@ -139,7 +139,13 @@ class DetailViewController: UIViewController {
     }
     
     @objc fileprivate func didChangeImageSizeCandidate() {
-        
+        self.updateSizeComponents()
+    }
+    
+    // MARK: - プロパティ
+    
+    fileprivate var currentSizeIndex: Int = 0 {
+        didSet { self.setCurrentSizeIndex(self.currentSizeIndex) }
     }
 }
 
@@ -376,13 +382,6 @@ extension DetailViewController {
 // MARK: - サイズ -
 extension DetailViewController {
     
-    fileprivate func setupSizeComponents() {
-        
-    }
-    
-    /*
-    // MARK: サイズ
-    
     /// サイズ関係コンポーネントをセットアップ
     fileprivate func setupSizeComponents() {
         self.updateSizeComponents()
@@ -390,8 +389,8 @@ extension DetailViewController {
     
     /// サイズ関係コンポーネントの表示を更新する
     fileprivate func updateSizeComponents() {
-        let candidates = App.Config.imageSizeCandidate.candidates
-        let size = App.Config.latestImageSize
+        let candidates = App.Config.Latest.imageSizeCandidate.candidates
+        let size       = App.Config.Latest.imageSize
         
         self.sizeSlider.minimumValue = 0
         self.sizeSlider.maximumValue = Float(candidates.count)
@@ -399,34 +398,19 @@ extension DetailViewController {
         self.currentSizeIndex = candidates.index(of: size) ?? 0
     }
     
-    var currentSizeIndex: Int = 0 {
-        didSet { var v = self.currentSizeIndex
-            let candidates = App.Config.imageSizeCandidate.candidates
-            
-            let min = 0, max = candidates.count
-            if v < min {
-                v = 0
-            } else if max <= v {
-                v = max - 1
-            }
-            
-            let size = candidates[v]
-            self.sizeLabel.text = "\(size)px"
-            self.sizeSlider.value = Float(v)
-            
-            App.Config.latestImageSize = size
-            self.currentSizeIndex = v
-        }
+    /// 現在のサイズのインデックスを設定する
+    /// このメソッドは self.currentSizeIndex に代入する時に走る
+    /// - parameter index: インデックス
+    fileprivate func setCurrentSizeIndex(_ index: Int) {
+        let candidates = App.Config.Latest.imageSizeCandidate.candidates
+        let i = candidates.indexInRange(for: index)
+        let size = candidates[i]
+        
+        self.sizeLabel.text = "\(size)px"
+        self.sizeSlider.value = i.float
+        
+        App.Config.Latest.imageSize = size
     }
-    
-    @IBAction fileprivate func didChangeSizeSlider() {
-        self.currentSizeIndex = Int(self.sizeSlider.value)
-    }
-    
-    @objc fileprivate func didChangeImageSizeCandidate() {
-        self.updateSizeComponents()
-    }
-    */
 }
 
 // MARK: - 生成 -
