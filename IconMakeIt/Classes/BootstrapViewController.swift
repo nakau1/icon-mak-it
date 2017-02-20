@@ -13,7 +13,7 @@ class BootstrapViewController: NBLandingViewController {
                     self.present(ListViewController.create())
                 },
                 NBLandingItem("詳細") {
-                    self.present(DetailViewController.create())
+                    //self.present(DetailViewController.create())
                 },
                 NBLandingItem("カラーピッカー") {
                     self.present(ColorPickerViewController.create())
