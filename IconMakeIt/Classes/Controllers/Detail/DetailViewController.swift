@@ -109,6 +109,9 @@ class DetailViewController: UIViewController {
             },
             commited: { [unowned self] color in
                 self.currentColor = color
+            },
+            disappeared: { [unowned self] in
+                self.colorPicker = nil
             }
         )
     }

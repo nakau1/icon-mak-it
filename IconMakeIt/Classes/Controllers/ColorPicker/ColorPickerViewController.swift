@@ -32,13 +32,15 @@ class ColorPickerViewController: UIViewController, UIPopoverPresentationControll
     /// 確定ボタン押下時ハンドラ
     fileprivate var commitColorHandler: ColorPickerHandler!
     
+    /// ポップアップ表示を閉じ終えた時のハンドラ
+    fileprivate var disappearHandler: VoidClosure!
+    
     /// 自身のインスタンスを生成する
     /// - returns: 新しい自身のインスタンス
     class func create() -> ColorPickerViewController {
         let ret = App.Storyboard("ColorPicker").get(ColorPickerViewController.self)
         return ret
     }
-    
     
     // MARK: ポップアップ表示
     
@@ -49,6 +51,7 @@ class ColorPickerViewController: UIViewController, UIPopoverPresentationControll
     /// - parameter arrowDirection: 吹き出しの位置
     /// - parameter saved: 保存ボタン押下時ハンドラ
     /// - parameter commited: 確定ボタン押下時ハンドラ
+    /// - parameter disappeared: ポップアップ表示を閉じ終えた時のハンドラ
     /// - returns: カラーピッカーの参照
     class func show(
         owner:          UIViewController,
@@ -56,13 +59,15 @@ class ColorPickerViewController: UIViewController, UIPopoverPresentationControll
         sourceView:     UIView,
         arrowDirection: UIPopoverArrowDirection,
         saved:          @escaping ColorPickerHandler,
-        commited:       @escaping ColorPickerHandler
+        commited:       @escaping ColorPickerHandler,
+        disappeared:    @escaping VoidClosure
         ) -> ColorPickerViewController
     {
         let vc = self.create()
         vc.color              = defaultColor
         vc.saveColorHandler   = saved
         vc.commitColorHandler = commited
+        vc.disappearHandler   = disappeared
         
         vc.modalPresentationStyle = .popover
         vc.preferredContentSize   = vc.view.bounds.size
@@ -90,6 +95,11 @@ class ColorPickerViewController: UIViewController, UIPopoverPresentationControll
     override func viewDidLoad() {
         super.viewDidLoad()
         self.updateComponents(true)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.disappearHandler()
     }
     
     // MARK: UI更新
@@ -144,7 +154,7 @@ class ColorPickerViewController: UIViewController, UIPopoverPresentationControll
     /// 確定ボタン押下時
     @IBAction fileprivate func didTapCommitButton() {
         self.commitColorHandler(self.color)
-        self.dismiss(animated: true) {}
+        self.dismiss()
     }
     
     // MARK: スライダーイベント
