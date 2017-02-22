@@ -52,7 +52,7 @@ class DetailViewController: UIViewController {
         self.observeNotification(false)
     }
     
-    // MARK: - ボタンイベント
+    // MARK: - イベント
     
     /// 閉じるボタン押下時
     @IBAction private func didTapCloseButton() {
@@ -61,7 +61,7 @@ class DetailViewController: UIViewController {
     
     /// カラー設定対象ボタン押下時
     @IBAction private func didTapColorChangeTargetButton() {
-        
+        self.colorChangeTarget = (self.colorChangeTarget == .icon) ? .background : .icon
     }
     
     /// 設定ボタン押下時
@@ -90,7 +90,7 @@ class DetailViewController: UIViewController {
     
     /// カラー設定のセグメント変更時
     @IBAction private func didChangeColorSegment() {
-        
+        self.colorSegment = ColorSegment(rawValue: self.colorSegments.selectedSegmentIndex)!
     }
     
     /// カラーボタン押下時
@@ -127,15 +127,15 @@ class DetailViewController: UIViewController {
     
     /// カラー履歴が更新された時
     @objc fileprivate func didUpdateColorHistories() {
-        
+        self.colorCollectionView.reloadData()
     }
     
     @objc fileprivate func didChangeIconColor() {
-        
+        self.updateColorComponents()
     }
     
     @objc fileprivate func didChangeBackgroundColor() {
-        
+        self.updateColorComponents()
     }
     
     @objc fileprivate func didChangeImageSizeCandidate() {
@@ -272,89 +272,60 @@ extension DetailViewController {
 extension DetailViewController {
     
     fileprivate func setupColorComponents() {
-        
-    }
-    
-    
-    /*
-    /// カラー関係コンポーネントのセットアップ
-    fileprivate func setupColorComponents() {
-        self.colorSegment      = App.Config.latestColorSegment
-        self.colorChangeTarget = App.Config.latestColorChangeTarget
+        self.colorSegment      = App.Config.Latest.colorSegment
+        self.colorChangeTarget = App.Config.Latest.colorChangeTarget
     }
     
     /// カラー関係コンポーネントの表示を更新する
     fileprivate func updateColorComponents() {
-        self.colorButton.setTitle("#\(self.currentColor.rgbString)", for: UIControlState())
-        self.iconLabel.textColor        = App.Config.iconColor
-        self.iconLabel.backgroundColor  = App.Config.backgroundColor
-        self.headerView.backgroundColor = App.Config.backgroundColor
+        self.colorButton.title = "#\(self.currentColor.rgbString)"
+        self.iconLabel .textColor       = App.Config.ThemeColor.iconColor
+        self.iconLabel .backgroundColor = App.Config.ThemeColor.backgroundColor
+        self.headerView.backgroundColor = App.Config.ThemeColor.backgroundColor
     }
     
     /// カラー設定対象
-    var colorChangeTarget: ColorChangeTarget = .icon {
-        didSet { let v = self.colorChangeTarget
+    fileprivate var colorChangeTarget: ColorChangeTarget {
+        get {
+            return self.colorChangeTargetButton.isSelected ? .background : .icon
+        }
+        set(v) {
             let icon = (v == .icon)
-            
             self.colorChangeTargetButton.isSelected = !icon
             self.colorCaptionLabel.text = " \( icon ? "ICON COLOR" : "BACKGROUND COLOR" )"
             self.updateColorComponents()
-            
-            App.Config.latestColorChangeTarget = v
+            App.Config.Latest.colorChangeTarget = v
         }
-    }
-    
-    /// カラー設定対象ボタン押下時
-    @IBAction fileprivate func didTapColorChangeTargetButton() {
-        self.colorChangeTarget = (self.colorChangeTarget == .icon) ? .background : .icon
     }
     
     /// カラー設定のセグメント種別
-    var colorSegment: ColorSegment = .history {
-        didSet { let v = self.colorSegment
+    fileprivate var colorSegment: ColorSegment {
+        get {
+            return ColorSegment(rawValue: self.colorSegments.selectedSegmentIndex)!
+        }
+        set(v) {
             self.colorSegments.selectedSegmentIndex = v.hashValue
             self.colorCollectionView.reloadData()
-            
-            App.Config.latestColorSegment = v
+            App.Config.Latest.colorSegment = v
         }
-    }
-    
-    /// カラー設定のセグメント変更時
-    @IBAction fileprivate func didChangeColorSegment() {
-        self.colorSegment = ColorSegment(rawValue: self.colorSegments.selectedSegmentIndex)!
     }
     
     /// 現在のカラー設定の保存/取得
     var currentColor: UIColor {
         get {
             switch self.colorChangeTarget {
-            case .icon:       return App.Config.iconColor
-            case .background: return App.Config.backgroundColor
+            case .icon:       return App.Config.ThemeColor.iconColor
+            case .background: return App.Config.ThemeColor.backgroundColor
             }
         }
         set(v) {
             switch self.colorChangeTarget {
-            case .icon:       App.Config.iconColor       = v
-            case .background: App.Config.backgroundColor = v
+            case .icon:       App.Config.ThemeColor.iconColor       = v
+            case .background: App.Config.ThemeColor.backgroundColor = v
             }
             self.updateColorComponents()
         }
     }
-    
-    /// カラー履歴が更新された時
-    @objc fileprivate func didUpdateColorHistories() {
-        self.colorCollectionView.reloadData()
-    }
-    
-    @objc fileprivate func didChangeIconColor() {
-        self.updateColorComponents()
-    }
-    
-    @objc fileprivate func didChangeBackgroundColor() {
-        self.updateColorComponents()
-    }
-    */
-    
     
     /*
     /// カラーピッカー

@@ -55,6 +55,12 @@ class LatestConfig {
         set(v) { self.raw.colorSegment = v.rawValue}
     }
     
+    /// カラー設定対象モード
+    var colorChangeTarget: ColorChangeTarget {
+        get    { return ColorChangeTarget(rawValue: self.raw.colorChangeTarget)! }
+        set(v) { self.raw.colorChangeTarget = v.rawValue}
+    }
+    
     /// 生成する画像のサイズ種別
     var generateSizes: GenerateSizes {
         get    { return GenerateSizes(rawValue: self.raw.generateSizes) }
