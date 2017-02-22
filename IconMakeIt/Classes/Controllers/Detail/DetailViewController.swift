@@ -27,6 +27,9 @@ class DetailViewController: UIViewController {
     @IBOutlet fileprivate weak var sizeSlider:              UISlider!
     @IBOutlet fileprivate weak var generateButton:          UIButton!
     
+    /// カラーピッカー
+    fileprivate var colorPicker: ColorPickerViewController?
+    
     /// 自身のインスタンスを生成する
     /// - parameter item: アイコンフォントアイテム
     /// - returns: 新しい自身のインスタンス
@@ -95,7 +98,19 @@ class DetailViewController: UIViewController {
     
     /// カラーボタン押下時
     @IBAction private func didTapColorButton() {
-        
+        self.colorPicker = ColorPickerViewController.show(
+            owner:          self,
+            defaultColor:   self.currentColor,
+            sourceView:     self.colorButton,
+            arrowDirection: .down,
+            saved: { [unowned self] color in
+                App.Config.Color.add(color)
+                self.colorCollectionView.reloadData()
+            },
+            commited: { [unowned self] color in
+                self.currentColor = color
+            }
+        )
     }
     
     /// サイズスライダー変更時
@@ -326,28 +341,6 @@ extension DetailViewController {
             self.updateColorComponents()
         }
     }
-    
-    /*
-    /// カラーピッカー
-    fileprivate var colorPicker: ColorPickerViewController?
-    
-    /// カラーボタン押下時
-    @IBAction fileprivate func didTapColorButton() {
-        self.colorPicker = ColorPickerViewController.show(
-            owner:          self,
-            defaultColor:   self.currentColor,
-            sourceView:     self.colorButton,
-            arrowDirection: .down,
-            saved: { color in
-                App.Config.addColorHistory(color)
-                self.colorCollectionView.reloadData()
-        },
-            commited: { color in
-                self.currentColor = color
-        }
-        )
-    }
-    */
 }
 
 // MARK: - サイズ -
