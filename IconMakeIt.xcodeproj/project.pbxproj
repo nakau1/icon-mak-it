@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CC5EED372857EB485DFF94DD /* Pods_IconMakeIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D026652D528C4A44F5C67DB0 /* Pods_IconMakeIt.framework */; };
+		DB064D831E5D5EA600769E83 /* DetailColorCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB064D821E5D5EA600769E83 /* DetailColorCollectionViewController.swift */; };
 		DB47BE8C1E4E9FF600923701 /* Config+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB47BE8A1E4E9FF600923701 /* Config+Color.swift */; };
 		DB47BE8D1E4E9FF600923701 /* Config+Latest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB47BE8B1E4E9FF600923701 /* Config+Latest.swift */; };
 		DB47BE911E5062B900923701 /* Config+Fixes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB47BE8F1E5062B900923701 /* Config+Fixes.swift */; };
@@ -77,6 +78,7 @@
 		B1D857A2968FECAD336B0F02 /* Pods-IconMakeIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IconMakeIt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IconMakeIt/Pods-IconMakeIt.debug.xcconfig"; sourceTree = "<group>"; };
 		D026652D528C4A44F5C67DB0 /* Pods_IconMakeIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IconMakeIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3EA529A903E0FBE5B749005 /* Pods-IconMakeIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IconMakeIt.release.xcconfig"; path = "Pods/Target Support Files/Pods-IconMakeIt/Pods-IconMakeIt.release.xcconfig"; sourceTree = "<group>"; };
+		DB064D821E5D5EA600769E83 /* DetailColorCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailColorCollectionViewController.swift; sourceTree = "<group>"; };
 		DB47BE8A1E4E9FF600923701 /* Config+Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Config+Color.swift"; sourceTree = "<group>"; };
 		DB47BE8B1E4E9FF600923701 /* Config+Latest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Config+Latest.swift"; sourceTree = "<group>"; };
 		DB47BE8F1E5062B900923701 /* Config+Fixes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Config+Fixes.swift"; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 			children = (
 				DBA3A2931E4AAD980016F8E1 /* Detail.storyboard */,
 				DBA3A2941E4AAD980016F8E1 /* DetailViewController.swift */,
+				DB064D821E5D5EA600769E83 /* DetailColorCollectionViewController.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -579,6 +582,7 @@
 				DBA3A2D31E4AB0BB0016F8E1 /* SliderView.swift in Sources */,
 				DBA3A2EC1E4CD86C0016F8E1 /* IconFont.swift in Sources */,
 				DBA3A2CE1E4AB0BB0016F8E1 /* GoogleAPI.swift in Sources */,
+				DB064D831E5D5EA600769E83 /* DetailColorCollectionViewController.swift in Sources */,
 				DBA3A2E81E4CD86C0016F8E1 /* ColorChangeTarget.swift in Sources */,
 				DBA3A2FB1E4D60300016F8E1 /* IconFontSetLigatureSymbols.swift in Sources */,
 				DBA3A2CF1E4AB0BB0016F8E1 /* GoogleDrive.swift in Sources */,

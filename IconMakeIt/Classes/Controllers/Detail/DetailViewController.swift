@@ -30,6 +30,9 @@ class DetailViewController: UIViewController {
     /// カラーピッカー
     fileprivate var colorPicker: ColorPickerViewController?
     
+    /// 色コレクションビューのアダプタ
+    fileprivate var colorCollectionAdapter: DetailColorCollectionViewController!
+    
     /// 自身のインスタンスを生成する
     /// - parameter item: アイコンフォントアイテム
     /// - returns: 新しい自身のインスタンス
@@ -290,6 +293,11 @@ extension DetailViewController {
 extension DetailViewController {
     
     fileprivate func setupColorComponents() {
+        self.colorCollectionAdapter = DetailColorCollectionViewController(colorSegment: App.Config.Latest.colorSegment) { [unowned self] color in
+            self.currentColor = color
+        }
+        self.colorCollectionAdapter.setup(self.colorCollectionView)
+        
         self.colorSegment      = App.Config.Latest.colorSegment
         self.colorChangeTarget = App.Config.Latest.colorChangeTarget
     }
@@ -323,7 +331,7 @@ extension DetailViewController {
         }
         set(v) {
             self.colorSegments.selectedSegmentIndex = v.hashValue
-            self.colorCollectionView.reloadData()
+            self.colorCollectionAdapter.colorSegment = v
             App.Config.Latest.colorSegment = v
         }
     }
@@ -415,94 +423,4 @@ extension DetailViewController {
 // MARK: - その他 -
 extension DetailViewController {
     
-}
-
-// MARK: - DetailColorCollectionViewController -
-
-/// 詳細画面・色コレクションビューコントローラ
-class DetailColorCollectionViewController: NBCollectionViewController {
-    
-    typealias SelectedHandler = (UIColor) -> ()
-    
-    var selectedHandler : SelectedHandler!
-    
-    // MARK: - イニシャライザ
-    
-    /// イニシャライザ
-    /// - parameter selectedHandler: 選択された時のハンドラ
-    convenience init(selectedHandler : @escaping SelectedHandler) {
-        self.init()
-        self.selectedHandler = selectedHandler
-    }
-    
-    // MARK: - パブリックメソッド
-    
-    /// リロードを実行する
-    func reload() {
-        self.collectionView?.reloadData()
-    }
-    
-    // MARK: -  UICollectionViewDelegateFlowLayout, UICollectionViewDataSource
-    
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.iconFontItems.count
-    }
-    
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ListCollectionViewCell
-        
-        cell.initialize()
-        cell.listTheme = App.Config.Latest.listTheme
-        cell.font = self.iconFont.set.font(64.f)
-        cell.text = self.iconFontItems[indexPath.row].text
-        
-        return cell
-    }
-    
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        super.collectionView(collectionView, didSelectItemAt: indexPath)
-    //    self.selectedHandler(self.iconFontItems[indexPath.row])
-    }
-    
-    // MARK: - プライベートプロパティ
-    
-    private var iconFont: IconFont {
-        return App.Config.Latest.iconFont
-    }
-    
-    private var iconFontItems: [IconFontItem] {
-        return self.iconFont.set.items
-    }
-    
-    /*
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        switch self.colorSegment {
-        case .history: return App.Config.colorHistories.count
-        case .preset:  return App.Color.presets.count
-        }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        
-        let rgb: Int, i = indexPath.row
-        switch self.colorSegment {
-        case .history: rgb = App.Config.colorHistories[i]
-        case .preset:  rgb = App.Color.presets[i]
-        }
-        cell.backgroundColor = UIColor(rgb: rgb)
-        
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let rgb: Int, i = indexPath.row
-        switch self.colorSegment {
-        case .history: rgb = App.Config.colorHistories[i]
-        case .preset:  rgb = App.Color.presets[i]
-        }
-        
-        self.currentColor = UIColor(rgb: rgb)
-    }
-    */
 }
