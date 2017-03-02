@@ -72,6 +72,14 @@
 		DBA97A411E4A94E6007CEED9 /* BootstrapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA97A351E4A94E6007CEED9 /* BootstrapViewController.swift */; };
 		DBA97A421E4A94E6007CEED9 /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA97A381E4A94E6007CEED9 /* List.storyboard */; };
 		DBA97A431E4A94E6007CEED9 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA97A391E4A94E6007CEED9 /* ListViewController.swift */; };
+		DBCFC2731E6885DC00752535 /* SettingItems+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCFC26B1E6885DC00752535 /* SettingItems+Color.swift */; };
+		DBCFC2741E6885DC00752535 /* SettingItems+FileName.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCFC26C1E6885DC00752535 /* SettingItems+FileName.swift */; };
+		DBCFC2751E6885DC00752535 /* SettingItems+GenerateSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCFC26D1E6885DC00752535 /* SettingItems+GenerateSizes.swift */; };
+		DBCFC2761E6885DC00752535 /* SettingItems+GoogleDrive.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCFC26E1E6885DC00752535 /* SettingItems+GoogleDrive.swift */; };
+		DBCFC2771E6885DC00752535 /* SettingItems+IconFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCFC26F1E6885DC00752535 /* SettingItems+IconFont.swift */; };
+		DBCFC2781E6885DC00752535 /* SettingItems+IconStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCFC2701E6885DC00752535 /* SettingItems+IconStyle.swift */; };
+		DBCFC2791E6885DC00752535 /* SettingItems+ImageSizeCandidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCFC2711E6885DC00752535 /* SettingItems+ImageSizeCandidate.swift */; };
+		DBCFC27A1E6885DC00752535 /* SettingItems+Other.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCFC2721E6885DC00752535 /* SettingItems+Other.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -145,6 +153,14 @@
 		DBA97A351E4A94E6007CEED9 /* BootstrapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BootstrapViewController.swift; sourceTree = "<group>"; };
 		DBA97A381E4A94E6007CEED9 /* List.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = List.storyboard; sourceTree = "<group>"; };
 		DBA97A391E4A94E6007CEED9 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		DBCFC26B1E6885DC00752535 /* SettingItems+Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SettingItems+Color.swift"; sourceTree = "<group>"; };
+		DBCFC26C1E6885DC00752535 /* SettingItems+FileName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SettingItems+FileName.swift"; sourceTree = "<group>"; };
+		DBCFC26D1E6885DC00752535 /* SettingItems+GenerateSizes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SettingItems+GenerateSizes.swift"; sourceTree = "<group>"; };
+		DBCFC26E1E6885DC00752535 /* SettingItems+GoogleDrive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SettingItems+GoogleDrive.swift"; sourceTree = "<group>"; };
+		DBCFC26F1E6885DC00752535 /* SettingItems+IconFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SettingItems+IconFont.swift"; sourceTree = "<group>"; };
+		DBCFC2701E6885DC00752535 /* SettingItems+IconStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SettingItems+IconStyle.swift"; sourceTree = "<group>"; };
+		DBCFC2711E6885DC00752535 /* SettingItems+ImageSizeCandidate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SettingItems+ImageSizeCandidate.swift"; sourceTree = "<group>"; };
+		DBCFC2721E6885DC00752535 /* SettingItems+Other.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SettingItems+Other.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +247,14 @@
 			children = (
 				DBA3A29C1E4AAD990016F8E1 /* Setting.storyboard */,
 				DBA3A29D1E4AAD990016F8E1 /* SettingViewController.swift */,
+				DBCFC26B1E6885DC00752535 /* SettingItems+Color.swift */,
+				DBCFC26C1E6885DC00752535 /* SettingItems+FileName.swift */,
+				DBCFC26D1E6885DC00752535 /* SettingItems+GenerateSizes.swift */,
+				DBCFC26E1E6885DC00752535 /* SettingItems+GoogleDrive.swift */,
+				DBCFC26F1E6885DC00752535 /* SettingItems+IconFont.swift */,
+				DBCFC2701E6885DC00752535 /* SettingItems+IconStyle.swift */,
+				DBCFC2711E6885DC00752535 /* SettingItems+ImageSizeCandidate.swift */,
+				DBCFC2721E6885DC00752535 /* SettingItems+Other.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -545,6 +569,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBA844911E5157AB00A7227A /* GoogleAPIAuthViewController.swift in Sources */,
+				DBCFC2731E6885DC00752535 /* SettingItems+Color.swift in Sources */,
+				DBCFC2791E6885DC00752535 /* SettingItems+ImageSizeCandidate.swift in Sources */,
 				DBA844951E51715A00A7227A /* App+Google.swift in Sources */,
 				DBA3A2E61E4CD86C0016F8E1 /* App+Color.swift in Sources */,
 				DBA8448F1E51575900A7227A /* GoogleAPIResult.swift in Sources */,
@@ -556,6 +582,8 @@
 				DBA3A2D01E4AB0BB0016F8E1 /* IconFontSetGoogleMaterialDesign.swift in Sources */,
 				DBA3A2AB1E4AAD990016F8E1 /* GoogleDriveViewController.swift in Sources */,
 				DBA3A2EF1E4CD86C0016F8E1 /* IconImageStyle.swift in Sources */,
+				DBCFC27A1E6885DC00752535 /* SettingItems+Other.swift in Sources */,
+				DBCFC2761E6885DC00752535 /* SettingItems+GoogleDrive.swift in Sources */,
 				DBA3A2B11E4AAD990016F8E1 /* WebViewController.swift in Sources */,
 				DBA8448D1E51572200A7227A /* GoogleAPIResultState.swift in Sources */,
 				DBA3A2A51E4AAD990016F8E1 /* ColorPickerViewController.swift in Sources */,
@@ -577,6 +605,9 @@
 				DBA3A2F11E4CD86C0016F8E1 /* ListTheme.swift in Sources */,
 				DBA3A2AD1E4AAD990016F8E1 /* SettingViewController.swift in Sources */,
 				DBA3A2ED1E4CD86C0016F8E1 /* IconFontItem.swift in Sources */,
+				DBCFC2771E6885DC00752535 /* SettingItems+IconFont.swift in Sources */,
+				DBCFC2741E6885DC00752535 /* SettingItems+FileName.swift in Sources */,
+				DBCFC2751E6885DC00752535 /* SettingItems+GenerateSizes.swift in Sources */,
 				DBA3A2E91E4CD86C0016F8E1 /* ColorSegment.swift in Sources */,
 				DBA3A2A71E4AAD990016F8E1 /* DetailViewController.swift in Sources */,
 				DBA3A2D31E4AB0BB0016F8E1 /* SliderView.swift in Sources */,
@@ -587,6 +618,7 @@
 				DBA3A2FB1E4D60300016F8E1 /* IconFontSetLigatureSymbols.swift in Sources */,
 				DBA3A2CF1E4AB0BB0016F8E1 /* GoogleDrive.swift in Sources */,
 				DBA97A411E4A94E6007CEED9 /* BootstrapViewController.swift in Sources */,
+				DBCFC2781E6885DC00752535 /* SettingItems+IconStyle.swift in Sources */,
 				DBA97A431E4A94E6007CEED9 /* ListViewController.swift in Sources */,
 				DBA3A2F81E4D60300016F8E1 /* IconFontSetFontAwasome.swift in Sources */,
 				DBA3A2EB1E4CD86C0016F8E1 /* GenerateSizes.swift in Sources */,

@@ -15,6 +15,13 @@ extension App.Notify {
         case UpdateColorHistories
         case ChangeGoogleAccount
         case ChangeImageSizeCandidate
+        
+        case SelectA
+        case SelectEditPrefix
+        case SelectEditSuffix
+        case SelectGuide
+        case SelectLicence
+    }
 
     /// 通知アイテムの送信
     /// - parameter item: 通知アイテム
