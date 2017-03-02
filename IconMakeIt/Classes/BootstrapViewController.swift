@@ -12,26 +12,14 @@ class BootstrapViewController: NBLandingViewController {
                 NBLandingItem("一覧") {
                     self.present(ListViewController.create())
                 },
-                NBLandingItem("詳細") {
-                    //self.present(DetailViewController.create())
-                },
-                NBLandingItem("カラーピッカー") {
-                    self.present(ColorPickerViewController.create())
-                },
-                NBLandingItem("プレフィックス・サフィックス設定") {
-                    self.present(FixesSettingViewController.create())
+                NBLandingItem("設定") {
+                    self.present(SettingViewController.create())
                 },
                 NBLandingItem("GoogleDrive") {
                     self.present(GoogleDriveViewController.create())
                 },
-                NBLandingItem("設定") {
-                    self.present(SettingViewController.create())
-                },
                 NBLandingItem("チュートリアル") {
                     self.present(TutorialViewController.create())
-                },
-                NBLandingItem("WEB") {
-                    self.present(WebViewController.create())
                 },
                 ]),
             (title:"テスト", rows:[
