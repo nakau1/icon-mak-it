@@ -15,6 +15,11 @@ extension App.Notify {
         case UpdateColorHistories
         case ChangeGoogleAccount
         case ChangeImageSizeCandidate
+
+    /// 通知アイテムの送信
+    /// - parameter item: 通知アイテム
+    class func post(to item: App.Notify.Item) {
+        self.post(item.rawValue)
     }
     
     /// 通知監視の追加
