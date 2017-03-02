@@ -72,7 +72,7 @@ class DetailViewController: UIViewController {
     
     /// 設定ボタン押下時
     @IBAction private func didTapSettingButton() {
-        
+        self.present(SettingViewController.create())
     }
     
     /// プレフィクスボタン押下時

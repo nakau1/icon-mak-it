@@ -48,7 +48,7 @@ class ListViewController: UIViewController {
     
     /// 設定ボタン押下時
     @IBAction private func didTapSettingButton() {
-        
+        self.present(SettingViewController.create())
     }
     
     // MARK: - 通知イベント
