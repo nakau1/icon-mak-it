@@ -14,6 +14,7 @@
 		DB47BE911E5062B900923701 /* Config+Fixes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB47BE8F1E5062B900923701 /* Config+Fixes.swift */; };
 		DB47BE931E50636A00923701 /* Config+GoogleDrive.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB47BE921E50636A00923701 /* Config+GoogleDrive.swift */; };
 		DB47BE951E50E77300923701 /* Config+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB47BE941E50E77300923701 /* Config+Default.swift */; };
+		DB4F10571E8CF6E5006280B8 /* FixesSettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4F10561E8CF6E5006280B8 /* FixesSettingTableViewController.swift */; };
 		DB6A99BB1E52A7F200F022CC /* Config+ThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6A99BA1E52A7F200F022CC /* Config+ThemeColor.swift */; };
 		DBA3A2A41E4AAD990016F8E1 /* ColorPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA3A2901E4AAD980016F8E1 /* ColorPicker.storyboard */; };
 		DBA3A2A51E4AAD990016F8E1 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA3A2911E4AAD980016F8E1 /* ColorPickerViewController.swift */; };
@@ -92,6 +93,7 @@
 		DB47BE8F1E5062B900923701 /* Config+Fixes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Config+Fixes.swift"; sourceTree = "<group>"; };
 		DB47BE921E50636A00923701 /* Config+GoogleDrive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Config+GoogleDrive.swift"; sourceTree = "<group>"; };
 		DB47BE941E50E77300923701 /* Config+Default.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Config+Default.swift"; sourceTree = "<group>"; };
+		DB4F10561E8CF6E5006280B8 /* FixesSettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FixesSettingTableViewController.swift; sourceTree = "<group>"; };
 		DB6A99BA1E52A7F200F022CC /* Config+ThemeColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Config+ThemeColor.swift"; sourceTree = "<group>"; };
 		DBA3A2901E4AAD980016F8E1 /* ColorPicker.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ColorPicker.storyboard; sourceTree = "<group>"; };
 		DBA3A2911E4AAD980016F8E1 /* ColorPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 			children = (
 				DBA3A2961E4AAD980016F8E1 /* FixesSetting.storyboard */,
 				DBA3A2971E4AAD980016F8E1 /* FixesSettingViewController.swift */,
+				DB4F10561E8CF6E5006280B8 /* FixesSettingTableViewController.swift */,
 			);
 			path = FixesSetting;
 			sourceTree = "<group>";
@@ -602,6 +605,7 @@
 				DBA3A2EA1E4CD86C0016F8E1 /* FixMode.swift in Sources */,
 				DBA3A2FD1E4D60300016F8E1 /* IconFontSetWebHostingHubGlyphs.swift in Sources */,
 				DBA3A2EE1E4CD86C0016F8E1 /* IconFontSet.swift in Sources */,
+				DB4F10571E8CF6E5006280B8 /* FixesSettingTableViewController.swift in Sources */,
 				DBA3A2F11E4CD86C0016F8E1 /* ListTheme.swift in Sources */,
 				DBA3A2AD1E4AAD990016F8E1 /* SettingViewController.swift in Sources */,
 				DBA3A2ED1E4CD86C0016F8E1 /* IconFontItem.swift in Sources */,

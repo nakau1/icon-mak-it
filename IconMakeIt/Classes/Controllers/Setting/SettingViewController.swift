@@ -79,12 +79,12 @@ class SettingViewController: UIViewController {
     
     /// プレフィックス編集選択時
     @objc fileprivate func didSelectEditPrefix() {
-        print("didSelectEditPrefix")
+        self.push(FixesSettingViewController.create(fixMode: .prefix))
     }
     
     /// サフィックス編集選択時
     @objc fileprivate func didSelectEditSuffix() {
-        print("didSelectEditSuffix")
+        self.push(FixesSettingViewController.create(fixMode: .suffix))
     }
     
     /// ガイド選択時

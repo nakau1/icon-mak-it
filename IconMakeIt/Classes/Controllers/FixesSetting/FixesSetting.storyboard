@@ -21,9 +21,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iKC-e6-fRP">
-                                <rect key="frame" x="9" y="239" width="320" height="372"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMM-XD-I3U">
+                                <rect key="frame" x="276" y="20" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="d7D-gq-N6X"/>
+                                    <constraint firstAttribute="width" constant="44" id="pX6-nO-uoL"/>
+                                </constraints>
+                                <state key="normal" image="btn_add"/>
+                                <connections>
+                                    <action selector="didTapAddButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="c8g-mL-aVp"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iKC-e6-fRP">
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" id="Apb-KU-S3j" customClass="FixesSettingTableViewCell" customModule="IconMakeIt" customModuleProvider="target">
@@ -52,30 +62,44 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <outlet property="textField" destination="eKg-kc-Kru" id="v9J-d2-QUV"/>
+                                            <outlet property="textField" destination="eKg-kc-Kru" id="0Cm-vN-6ss"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMM-XD-I3U">
-                                <rect key="frame" x="275" y="72" width="44" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="btn_add"/>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New Item Here..." textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="20P-bg-BfE">
-                                <rect key="frame" x="19" y="76" width="248" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New Item Here..." textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="20P-bg-BfE">
+                                <rect key="frame" x="8" y="20" width="260" height="44"/>
                                 <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="F03-00-rP4"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="iKC-e6-fRP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="01D-aX-hso"/>
+                            <constraint firstItem="20P-bg-BfE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="28R-sO-2Cr"/>
+                            <constraint firstItem="iKC-e6-fRP" firstAttribute="top" secondItem="20P-bg-BfE" secondAttribute="bottom" id="7pA-5D-TEI"/>
+                            <constraint firstItem="VMM-XD-I3U" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="F1x-Xo-5Ni"/>
+                            <constraint firstItem="VMM-XD-I3U" firstAttribute="leading" secondItem="20P-bg-BfE" secondAttribute="trailing" constant="8" id="S5b-xg-T7g"/>
+                            <constraint firstAttribute="trailing" secondItem="VMM-XD-I3U" secondAttribute="trailing" id="aJ7-eM-thf"/>
+                            <constraint firstAttribute="trailing" secondItem="iKC-e6-fRP" secondAttribute="trailing" id="dS1-KG-prz"/>
+                            <constraint firstItem="VMM-XD-I3U" firstAttribute="top" secondItem="20P-bg-BfE" secondAttribute="top" id="pH2-aA-u7C"/>
+                            <constraint firstItem="VMM-XD-I3U" firstAttribute="bottom" secondItem="20P-bg-BfE" secondAttribute="bottom" id="rhz-oj-e81"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iKC-e6-fRP" secondAttribute="bottom" id="tky-9h-z1i"/>
+                        </constraints>
                     </view>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="iKC-e6-fRP" id="dTU-rK-ROC"/>
+                        <outlet property="textField" destination="20P-bg-BfE" id="YTu-KX-Pyt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="138.75" y="132.5"/>
         </scene>
     </scenes>
     <resources>

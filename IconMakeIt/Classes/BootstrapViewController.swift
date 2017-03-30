@@ -12,6 +12,9 @@ class BootstrapViewController: NBLandingViewController {
                 NBLandingItem("一覧") {
                     self.present(ListViewController.create())
                 },
+                NBLandingItem("プレフィクス") {
+                    self.present(FixesSettingViewController.create(fixMode: .suffix))
+                },
                 NBLandingItem("設定") {
                     self.present(SettingViewController.create())
                 },
