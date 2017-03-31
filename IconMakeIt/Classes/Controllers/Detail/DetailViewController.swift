@@ -126,7 +126,7 @@ class DetailViewController: UIViewController {
         
     /// 生成ボタン押下時
     @IBAction fileprivate func didTapGenerateButton() {
-        
+        self.generate()
     }
     
     // MARK: - 通知イベント
@@ -421,6 +421,33 @@ extension DetailViewController {
     
     /// 生成処理を行う
     fileprivate func generate() {
-        
+        async(async: {
+            let namesAndImages = self.generateNamesAndImages()
+            
+            // デバッグ
+            for (name, image) in namesAndImages {
+                let _ = NBFile.documentDirectory.name(name + ".png").saveImageAsPNG(image)
+            }
+            print(NBFile.documentDirectory.path)
+            
+        }, completed: {
+            
+        })
+    }
+    
+    private func generateNamesAndImages() -> [String : UIImage] {
+        let gen = ImageGenerator(
+            iconFontSet:     App.Config.Latest.iconFont.set,
+            iconColor:       App.Config.ThemeColor.iconColor,
+            backgroundColor: App.Config.ThemeColor.backgroundColor,
+            size:            App.Config.Latest.imageSize.f,
+            style:           App.Config.Latest.iconImageStyle
+        )
+        let ret = gen.generate(
+            text:     self.item.text,
+            fileName: "\(self.prefix)\(self.fileName)\(self.suffix)".trim(),
+            sizes:    App.Config.Latest.generateSizes
+        )
+        return ret
     }
 }
