@@ -348,8 +348,12 @@ extension DetailViewController {
         }
         set(v) {
             switch self.colorChangeTarget {
-            case .icon:       App.Config.ThemeColor.iconColor       = v
-            case .background: App.Config.ThemeColor.backgroundColor = v
+            case .icon:
+                App.Config.ThemeColor.iconColor = v
+                App.Notify.post(to: .ChangeIconColor)
+            case .background:
+                App.Config.ThemeColor.backgroundColor = v
+                App.Notify.post(to: .ChangeBackgroundColor)
             }
             self.updateColorComponents()
         }
@@ -419,10 +423,4 @@ extension DetailViewController {
     fileprivate func generate() {
         
     }
-}
-
-
-// MARK: - その他 -
-extension DetailViewController {
-    
 }
