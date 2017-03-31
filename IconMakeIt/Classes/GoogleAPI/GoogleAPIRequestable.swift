@@ -6,30 +6,30 @@ import UIKit
 import NeroBlu
 import GoogleAPIClient
 
-// MARK: - GoogleAPIRequest -
+// MARK: - GoogleAPIRequestable -
 
 /// GoogleAPIリクエストのインターフェイスプロトコル
-protocol GoogleAPIRequest {
+protocol GoogleAPIRequestable {
     
     associatedtype Response
     
     /// 使用するクエリオブジェクトを返却する(必須)
-    func query() -> AnyObject
+    func query() -> GTLQuery
     
     /// APIからの戻り値を元にレスポンスを生成して返却する(必須)
     /// - parameter res: APIからの戻り値オブジェクト
     /// - returns: レスポンス
-    func processResponse(_ res: AnyObject?) -> Response?
+    func processResponse(_ res: Any?) -> Response?
     
     /// リクエスト前にクエリに対して処理(パラメータの追加など)を施す(オプショナル)
     /// - parameter query: クエリオブジェクト
     /// - returns: 引数queryに対して何らかの処理をしたクエリオブジェクト
-    func processQuery(_ query: GTLQueryDrive) -> GTLQueryDrive
+    func processQuery(_ query: GTLQuery) -> GTLQuery?
     
     /// リクエスト前にサービスに対して処理(パラメータの追加など)を施す(オプショナル)
     /// - parameter service: サービスオブジェクト
     /// - returns: 引数serviceに対して何らかの処理をしたサービスオブジェクト
-    func processService(_ service: GTLServiceDrive) -> GTLServiceDrive
+    func processService(_ service: GTLService) -> GTLService?
     
     /// API結果のステータスを返却する(オプショナル)
     ///
@@ -39,11 +39,11 @@ protocol GoogleAPIRequest {
     func resultState() -> GoogleAPIResultState
 }
 
-extension GoogleAPIRequest {
+extension GoogleAPIRequestable {
     
-    func processQuery(_ query: GTLQueryDrive) -> GTLQueryDrive { return query }
+    func processQuery(_ query: GTLQuery) -> GTLQuery? { return query }
     
-    func processService(_ service: GTLServiceDrive) -> GTLServiceDrive { return service }
+    func processService(_ service: GTLService) -> GTLService? { return service }
     
     func resultState() -> GoogleAPIResultState { return .succeed }
 }

@@ -4,6 +4,7 @@
  */
 import UIKit
 import NeroBlu
+import GoogleAPIClient
 
 class BootstrapViewController: NBLandingViewController {
     override var items: [(title: String, rows: [NBLandingItem])] {
@@ -33,9 +34,41 @@ class BootstrapViewController: NBLandingViewController {
                 ]),
             (title:"Google", rows:[
                 NBLandingItem("認証画面") {
-                    App.Google.API.authorize(self) { state in
+                    App.Google.DriveAPI.authorize(self) { state in
+                        self.tableView.reloadData()
                         
+                        App.Google.DriveAPI.request(App.Google.Drive.GetFiles()) { response, result in
+                            if let lists = response as [GTLDriveFile]? {
+                                print(lists)
+                            }
+                        }
                     }
+                },
+                NBLandingItem("フォルダ作成/ファイル作成テスト") {
+                    App.Google.DriveAPI.authorize(self) { state in
+                        
+                        App.Google.DriveAPI.request(App.Google.Drive.CreateFolder(name: "テストだよ", parentFolder: nil)) { response, result in
+                            if let file = response! as GTLDriveFile? {
+                                
+                                let rq = App.Google.Drive.UploadPngFile(image: UIImage(named: "icon_folder")!, name: "アイコン.png", folder: file)
+                                
+                                App.Google.DriveAPI.request(rq) { response, result in
+                                    if let file = response! as GTLDriveFile? {
+                                        print(file)
+                                    }
+                                }
+                                
+                                
+                            }
+                        }
+                    }
+                },
+                NBLandingItem("ログアウト") {
+                    App.Google.DriveAPI.logoutAuthorization()
+                    self.tableView.reloadData()
+                },
+                NBLandingItem(App.Google.DriveAPI.userEmail ?? "(未認証)") {
+                    
                 },
                 ]),
         ]

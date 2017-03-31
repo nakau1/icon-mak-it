@@ -8,8 +8,6 @@ PODS:
   - GTMAppAuth (0.5.0):
     - AppAuth (~> 0.7.0)
     - GTMSessionFetcher (~> 1.1)
-  - GTMOAuth2 (1.1.4):
-    - GTMSessionFetcher (~> 1.1)
   - GTMSessionFetcher (1.1.7):
     - GTMSessionFetcher/Full (= 1.1.7)
   - GTMSessionFetcher/Core (1.1.7)
@@ -21,7 +19,6 @@ PODS:
 DEPENDENCIES:
   - GoogleAPIClient/Drive (~> 1.0.2)
   - GTMAppAuth
-  - GTMOAuth2 (~> 1.1.0)
   - NeroBlu (from `https://github.com/nakau1/NeroBlu`)
   - SVProgressHUD
 
@@ -38,11 +35,10 @@ SPEC CHECKSUMS:
   AppAuth: b8159d6bbff5a47e5398fccd61560ae1bcac61e6
   GoogleAPIClient: 4a6b0b807de8b1115a2835180b25dd93dc60f1ea
   GTMAppAuth: 4b7bdc1fefdf6a49f3d9fc1aa6123f0c7e9b6660
-  GTMOAuth2: 7fc9c10f5c745f4d9850419ea88889fe3baa6b7d
   GTMSessionFetcher: a1f8ed39e4fe21c68957daed472c7afbcdf29166
   NeroBlu: 4d1ca8e7e7d52fccf2ce17fc742cc0f4c37d5d25
   SVProgressHUD: bfde85ed6c573ea802b9cb37894ed9b629034f1b
 
-PODFILE CHECKSUM: ab11791e59fb52af9132cd3942591d1dd2bcccd2
+PODFILE CHECKSUM: 78c68b7d6158508aac3d1a07c9a3a1a5f47c2e3f
 
 COCOAPODS: 1.2.0.beta.1

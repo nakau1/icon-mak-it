@@ -8,9 +8,8 @@ target 'IconMakeIt' do
   use_frameworks!
   
   pod 'NeroBlu', :git => 'https://github.com/nakau1/NeroBlu'
-  pod 'GoogleAPIClient/Drive', '~> 1.0.2'
-  pod 'GTMOAuth2', '~> 1.1.0'
   pod 'GTMAppAuth'
+  pod 'GoogleAPIClient/Drive', '~> 1.0.2'
   pod 'SVProgressHUD'
 
 end
