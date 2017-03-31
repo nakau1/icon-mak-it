@@ -260,11 +260,13 @@ extension DetailViewController {
     /// - parameter fix: プレフィックス/サフィックス
     /// - parameter selected: 選択時の処理
     fileprivate func showSelectFixActionSheet(fix: FixMode, selected: @escaping (String) -> ()) {
-        let actions = self.fixes(fix).map { text in
+        var actions = self.fixes(fix).map { text in
             return UIAlertAction(text) {
                 selected(text)
             }
         }
+        actions.append(UIAlertAction(destructive: "cancel".localize()))
+        
         NBActionSheet.show(self, actions: actions)
     }
     
