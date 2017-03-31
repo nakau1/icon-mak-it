@@ -13,12 +13,6 @@ class GoogleAPI {
     
     typealias AuthorizedHandler = (GoogleAPIResultState) -> Void
     
-    /// 認証されたメールアドレス
-    private(set) var userEmail = ""
-    
-    /// 認証情報
-    private(set) var persistence = ""
-    
     private var authorizedHandler: AuthorizedHandler?
     
     private var authorization: GTMAppAuthFetcherAuthorization?
@@ -65,11 +59,14 @@ class GoogleAPI {
         }
     }
     
-    /// キーチェーンから認証中のEmail
-    var authenticatedUserEmail: String? {
-        return ""
+    /// 認証されたメールアドレス
+    var userEmail: String? {
+        if self.existsAuthorization() {
+            return self.service.authorizer.userEmail
+        }
+        return nil
     }
-    
+        
     // MARK: - 認証
     
     /// 認証を行う
@@ -155,11 +152,14 @@ class GoogleAPI {
     }
     
     private func generateAuthorizationRequest(_ configuration: OIDServiceConfiguration, _ redirectURL: URL) -> OIDAuthorizationRequest {
+        var scopes = App.Google.Configure.Scopes
+        scopes.append(OIDScopeEmail)
+        
         return  OIDAuthorizationRequest(
             configuration:        configuration,
             clientId:             App.Google.Configure.ClientID,
             clientSecret:         App.Google.Configure.ClientSecret,
-            scopes:               [App.Google.Configure.Scope],
+            scopes:               scopes,
             redirectURL:          redirectURL,
             responseType:         OIDResponseTypeCode,
             additionalParameters: nil
