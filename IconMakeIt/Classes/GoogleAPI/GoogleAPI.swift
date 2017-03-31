@@ -167,8 +167,3 @@ class GoogleAPI {
     }
 }
 
-// MARK: - App.Google拡張 -
-extension App.Google {
-    
-    static let API = GoogleAPI()
-}

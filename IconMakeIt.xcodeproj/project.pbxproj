@@ -18,6 +18,13 @@
 		DB4F10591E8E29BB006280B8 /* ListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4F10581E8E29BB006280B8 /* ListCollectionViewController.swift */; };
 		DB4F105B1E8E29C3006280B8 /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4F105A1E8E29C3006280B8 /* ListCollectionViewCell.swift */; };
 		DB4F105D1E8E3E4E006280B8 /* ImageGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4F105C1E8E3E4E006280B8 /* ImageGenerator.swift */; };
+		DB4F10671E8E8245006280B8 /* App+Google.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4F105F1E8E8245006280B8 /* App+Google.swift */; };
+		DB4F10681E8E8245006280B8 /* GoogleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4F10601E8E8245006280B8 /* GoogleAPI.swift */; };
+		DB4F10691E8E8245006280B8 /* GoogleAPIAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4F10611E8E8245006280B8 /* GoogleAPIAuthViewController.swift */; };
+		DB4F106A1E8E8245006280B8 /* GoogleAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4F10621E8E8245006280B8 /* GoogleAPIRequest.swift */; };
+		DB4F106B1E8E8245006280B8 /* GoogleAPIResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4F10631E8E8245006280B8 /* GoogleAPIResult.swift */; };
+		DB4F106C1E8E8245006280B8 /* GoogleAPIResultState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4F10641E8E8245006280B8 /* GoogleAPIResultState.swift */; };
+		DB4F106D1E8E8245006280B8 /* GoogleDrive.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4F10661E8E8245006280B8 /* GoogleDrive.swift */; };
 		DB6A99BB1E52A7F200F022CC /* Config+ThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6A99BA1E52A7F200F022CC /* Config+ThemeColor.swift */; };
 		DBA3A2A41E4AAD990016F8E1 /* ColorPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA3A2901E4AAD980016F8E1 /* ColorPicker.storyboard */; };
 		DBA3A2A51E4AAD990016F8E1 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA3A2911E4AAD980016F8E1 /* ColorPickerViewController.swift */; };
@@ -33,8 +40,6 @@
 		DBA3A2AF1E4AAD990016F8E1 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA3A2A01E4AAD990016F8E1 /* TutorialViewController.swift */; };
 		DBA3A2B01E4AAD990016F8E1 /* Web.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA3A2A21E4AAD990016F8E1 /* Web.storyboard */; };
 		DBA3A2B11E4AAD990016F8E1 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA3A2A31E4AAD990016F8E1 /* WebViewController.swift */; };
-		DBA3A2CE1E4AB0BB0016F8E1 /* GoogleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA3A2C41E4AB0BB0016F8E1 /* GoogleAPI.swift */; };
-		DBA3A2CF1E4AB0BB0016F8E1 /* GoogleDrive.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA3A2C51E4AB0BB0016F8E1 /* GoogleDrive.swift */; };
 		DBA3A2D01E4AB0BB0016F8E1 /* IconFontSetGoogleMaterialDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA3A2C71E4AB0BB0016F8E1 /* IconFontSetGoogleMaterialDesign.swift */; };
 		DBA3A2D21E4AB0BB0016F8E1 /* Hud.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA3A2CB1E4AB0BB0016F8E1 /* Hud.swift */; };
 		DBA3A2D31E4AB0BB0016F8E1 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA3A2CD1E4AB0BB0016F8E1 /* SliderView.swift */; };
@@ -63,12 +68,6 @@
 		DBA3A30A1E4D6FC10016F8E1 /* LigatureSymbols-2.11.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DBA3A3031E4D6FC10016F8E1 /* LigatureSymbols-2.11.ttf */; };
 		DBA3A30B1E4D6FC10016F8E1 /* typicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DBA3A3041E4D6FC10016F8E1 /* typicons.ttf */; };
 		DBA3A30C1E4D6FC10016F8E1 /* webhostinghub-glyphs.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DBA3A3051E4D6FC10016F8E1 /* webhostinghub-glyphs.ttf */; };
-		DBA8448B1E51567B00A7227A /* GoogleAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA8448A1E51567B00A7227A /* GoogleAPIRequest.swift */; };
-		DBA8448D1E51572200A7227A /* GoogleAPIResultState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA8448C1E51572200A7227A /* GoogleAPIResultState.swift */; };
-		DBA8448F1E51575900A7227A /* GoogleAPIResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA8448E1E51575900A7227A /* GoogleAPIResult.swift */; };
-		DBA844911E5157AB00A7227A /* GoogleAPIAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA844901E5157AB00A7227A /* GoogleAPIAuthViewController.swift */; };
-		DBA844931E51712400A7227A /* GoogleAPIConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA844921E51712400A7227A /* GoogleAPIConfigure.swift */; };
-		DBA844951E51715A00A7227A /* App+Google.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA844941E51715A00A7227A /* App+Google.swift */; };
 		DBA97A261E4A90FD007CEED9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA97A241E4A90FD007CEED9 /* Main.storyboard */; };
 		DBA97A281E4A90FD007CEED9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBA97A271E4A90FD007CEED9 /* Assets.xcassets */; };
 		DBA97A2B1E4A90FD007CEED9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA97A291E4A90FD007CEED9 /* LaunchScreen.storyboard */; };
@@ -100,6 +99,13 @@
 		DB4F10581E8E29BB006280B8 /* ListCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCollectionViewController.swift; sourceTree = "<group>"; };
 		DB4F105A1E8E29C3006280B8 /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
 		DB4F105C1E8E3E4E006280B8 /* ImageGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGenerator.swift; sourceTree = "<group>"; };
+		DB4F105F1E8E8245006280B8 /* App+Google.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "App+Google.swift"; sourceTree = "<group>"; };
+		DB4F10601E8E8245006280B8 /* GoogleAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAPI.swift; sourceTree = "<group>"; };
+		DB4F10611E8E8245006280B8 /* GoogleAPIAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAPIAuthViewController.swift; sourceTree = "<group>"; };
+		DB4F10621E8E8245006280B8 /* GoogleAPIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAPIRequest.swift; sourceTree = "<group>"; };
+		DB4F10631E8E8245006280B8 /* GoogleAPIResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAPIResult.swift; sourceTree = "<group>"; };
+		DB4F10641E8E8245006280B8 /* GoogleAPIResultState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAPIResultState.swift; sourceTree = "<group>"; };
+		DB4F10661E8E8245006280B8 /* GoogleDrive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleDrive.swift; sourceTree = "<group>"; };
 		DB6A99BA1E52A7F200F022CC /* Config+ThemeColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Config+ThemeColor.swift"; sourceTree = "<group>"; };
 		DBA3A2901E4AAD980016F8E1 /* ColorPicker.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ColorPicker.storyboard; sourceTree = "<group>"; };
 		DBA3A2911E4AAD980016F8E1 /* ColorPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
@@ -115,8 +121,6 @@
 		DBA3A2A01E4AAD990016F8E1 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		DBA3A2A21E4AAD990016F8E1 /* Web.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Web.storyboard; sourceTree = "<group>"; };
 		DBA3A2A31E4AAD990016F8E1 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
-		DBA3A2C41E4AB0BB0016F8E1 /* GoogleAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAPI.swift; sourceTree = "<group>"; };
-		DBA3A2C51E4AB0BB0016F8E1 /* GoogleDrive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleDrive.swift; sourceTree = "<group>"; };
 		DBA3A2C71E4AB0BB0016F8E1 /* IconFontSetGoogleMaterialDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconFontSetGoogleMaterialDesign.swift; sourceTree = "<group>"; };
 		DBA3A2CB1E4AB0BB0016F8E1 /* Hud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hud.swift; sourceTree = "<group>"; };
 		DBA3A2CD1E4AB0BB0016F8E1 /* SliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
@@ -146,12 +150,6 @@
 		DBA3A3041E4D6FC10016F8E1 /* typicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = typicons.ttf; sourceTree = "<group>"; };
 		DBA3A3051E4D6FC10016F8E1 /* webhostinghub-glyphs.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "webhostinghub-glyphs.ttf"; sourceTree = "<group>"; };
 		DBA3A3101E4D72E80016F8E1 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
-		DBA8448A1E51567B00A7227A /* GoogleAPIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAPIRequest.swift; sourceTree = "<group>"; };
-		DBA8448C1E51572200A7227A /* GoogleAPIResultState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAPIResultState.swift; sourceTree = "<group>"; };
-		DBA8448E1E51575900A7227A /* GoogleAPIResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAPIResult.swift; sourceTree = "<group>"; };
-		DBA844901E5157AB00A7227A /* GoogleAPIAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAPIAuthViewController.swift; sourceTree = "<group>"; };
-		DBA844921E51712400A7227A /* GoogleAPIConfigure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAPIConfigure.swift; sourceTree = "<group>"; };
-		DBA844941E51715A00A7227A /* App+Google.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "App+Google.swift"; sourceTree = "<group>"; };
 		DBA97A1D1E4A90FD007CEED9 /* IconMakeIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IconMakeIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBA97A251E4A90FD007CEED9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DBA97A271E4A90FD007CEED9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -211,6 +209,27 @@
 				DB47BE921E50636A00923701 /* Config+GoogleDrive.swift */,
 			);
 			path = Configs;
+			sourceTree = "<group>";
+		};
+		DB4F105E1E8E8245006280B8 /* GoogleAPI */ = {
+			isa = PBXGroup;
+			children = (
+				DB4F105F1E8E8245006280B8 /* App+Google.swift */,
+				DB4F10601E8E8245006280B8 /* GoogleAPI.swift */,
+				DB4F10611E8E8245006280B8 /* GoogleAPIAuthViewController.swift */,
+				DB4F10621E8E8245006280B8 /* GoogleAPIRequest.swift */,
+				DB4F10631E8E8245006280B8 /* GoogleAPIResult.swift */,
+				DB4F10641E8E8245006280B8 /* GoogleAPIResultState.swift */,
+			);
+			path = GoogleAPI;
+			sourceTree = "<group>";
+		};
+		DB4F10651E8E8245006280B8 /* GoogleDrive */ = {
+			isa = PBXGroup;
+			children = (
+				DB4F10661E8E8245006280B8 /* GoogleDrive.swift */,
+			);
+			path = GoogleDrive;
 			sourceTree = "<group>";
 		};
 		DBA3A28F1E4AAD980016F8E1 /* ColorPicker */ = {
@@ -284,21 +303,6 @@
 				DBA3A2A31E4AAD990016F8E1 /* WebViewController.swift */,
 			);
 			path = Web;
-			sourceTree = "<group>";
-		};
-		DBA3A2C31E4AB0BB0016F8E1 /* GoogleDrive */ = {
-			isa = PBXGroup;
-			children = (
-				DBA844941E51715A00A7227A /* App+Google.swift */,
-				DBA844921E51712400A7227A /* GoogleAPIConfigure.swift */,
-				DBA3A2C41E4AB0BB0016F8E1 /* GoogleAPI.swift */,
-				DBA8448A1E51567B00A7227A /* GoogleAPIRequest.swift */,
-				DBA8448C1E51572200A7227A /* GoogleAPIResultState.swift */,
-				DBA8448E1E51575900A7227A /* GoogleAPIResult.swift */,
-				DBA844901E5157AB00A7227A /* GoogleAPIAuthViewController.swift */,
-				DBA3A2C51E4AB0BB0016F8E1 /* GoogleDrive.swift */,
-			);
-			path = GoogleDrive;
 			sourceTree = "<group>";
 		};
 		DBA3A2C61E4AB0BB0016F8E1 /* Icons */ = {
@@ -403,9 +407,10 @@
 				DBA97A341E4A94E6007CEED9 /* AppDelegate.swift */,
 				DBA97A351E4A94E6007CEED9 /* BootstrapViewController.swift */,
 				DBA97A361E4A94E6007CEED9 /* Controllers */,
-				DBA3A2C31E4AB0BB0016F8E1 /* GoogleDrive */,
 				DBA3A2C61E4AB0BB0016F8E1 /* Icons */,
 				DBA3A2C81E4AB0BB0016F8E1 /* Models */,
+				DB4F105E1E8E8245006280B8 /* GoogleAPI */,
+				DB4F10651E8E8245006280B8 /* GoogleDrive */,
 				DBA3A2CA1E4AB0BB0016F8E1 /* Utils */,
 				DBA3A2CC1E4AB0BB0016F8E1 /* Widgets */,
 				DBA3A3101E4D72E80016F8E1 /* Bridging-Header.h */,
@@ -580,12 +585,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBA844911E5157AB00A7227A /* GoogleAPIAuthViewController.swift in Sources */,
+				DB4F10671E8E8245006280B8 /* App+Google.swift in Sources */,
 				DBCFC2731E6885DC00752535 /* SettingItems+Color.swift in Sources */,
 				DBCFC2791E6885DC00752535 /* SettingItems+ImageSizeCandidate.swift in Sources */,
-				DBA844951E51715A00A7227A /* App+Google.swift in Sources */,
 				DBA3A2E61E4CD86C0016F8E1 /* App+Color.swift in Sources */,
-				DBA8448F1E51575900A7227A /* GoogleAPIResult.swift in Sources */,
 				DBA3A2FA1E4D60300016F8E1 /* IconFontSetGenericons.swift in Sources */,
 				DB6A99BB1E52A7F200F022CC /* Config+ThemeColor.swift in Sources */,
 				DB47BE931E50636A00923701 /* Config+GoogleDrive.swift in Sources */,
@@ -598,17 +601,15 @@
 				DBCFC27A1E6885DC00752535 /* SettingItems+Other.swift in Sources */,
 				DBCFC2761E6885DC00752535 /* SettingItems+GoogleDrive.swift in Sources */,
 				DBA3A2B11E4AAD990016F8E1 /* WebViewController.swift in Sources */,
-				DBA8448D1E51572200A7227A /* GoogleAPIResultState.swift in Sources */,
 				DBA3A2A51E4AAD990016F8E1 /* ColorPickerViewController.swift in Sources */,
 				DBA3A2AF1E4AAD990016F8E1 /* TutorialViewController.swift in Sources */,
 				DB47BE911E5062B900923701 /* Config+Fixes.swift in Sources */,
 				DB47BE951E50E77300923701 /* Config+Default.swift in Sources */,
 				DB47BE8C1E4E9FF600923701 /* Config+Color.swift in Sources */,
+				DB4F10681E8E8245006280B8 /* GoogleAPI.swift in Sources */,
 				DBA3A2D21E4AB0BB0016F8E1 /* Hud.swift in Sources */,
 				DBA3A2F01E4CD86C0016F8E1 /* ImageSizeCandidate.swift in Sources */,
-				DBA844931E51712400A7227A /* GoogleAPIConfigure.swift in Sources */,
 				DBA3A2A91E4AAD990016F8E1 /* FixesSettingViewController.swift in Sources */,
-				DBA8448B1E51567B00A7227A /* GoogleAPIRequest.swift in Sources */,
 				DBA3A2F91E4D60300016F8E1 /* IconFontSetFoundationIcons.swift in Sources */,
 				DBA97A401E4A94E6007CEED9 /* AppDelegate.swift in Sources */,
 				DB4F105D1E8E3E4E006280B8 /* ImageGenerator.swift in Sources */,
@@ -626,15 +627,18 @@
 				DBA3A2E91E4CD86C0016F8E1 /* ColorSegment.swift in Sources */,
 				DBA3A2A71E4AAD990016F8E1 /* DetailViewController.swift in Sources */,
 				DBA3A2D31E4AB0BB0016F8E1 /* SliderView.swift in Sources */,
+				DB4F106D1E8E8245006280B8 /* GoogleDrive.swift in Sources */,
 				DBA3A2EC1E4CD86C0016F8E1 /* IconFont.swift in Sources */,
-				DBA3A2CE1E4AB0BB0016F8E1 /* GoogleAPI.swift in Sources */,
 				DB064D831E5D5EA600769E83 /* DetailColorCollectionViewController.swift in Sources */,
 				DBA3A2E81E4CD86C0016F8E1 /* ColorChangeTarget.swift in Sources */,
+				DB4F106A1E8E8245006280B8 /* GoogleAPIRequest.swift in Sources */,
 				DBA3A2FB1E4D60300016F8E1 /* IconFontSetLigatureSymbols.swift in Sources */,
-				DBA3A2CF1E4AB0BB0016F8E1 /* GoogleDrive.swift in Sources */,
 				DBA97A411E4A94E6007CEED9 /* BootstrapViewController.swift in Sources */,
 				DBCFC2781E6885DC00752535 /* SettingItems+IconStyle.swift in Sources */,
+				DB4F106B1E8E8245006280B8 /* GoogleAPIResult.swift in Sources */,
 				DB4F10591E8E29BB006280B8 /* ListCollectionViewController.swift in Sources */,
+				DB4F10691E8E8245006280B8 /* GoogleAPIAuthViewController.swift in Sources */,
+				DB4F106C1E8E8245006280B8 /* GoogleAPIResultState.swift in Sources */,
 				DBA97A431E4A94E6007CEED9 /* ListViewController.swift in Sources */,
 				DBA3A2F81E4D60300016F8E1 /* IconFontSetFontAwasome.swift in Sources */,
 				DBA3A2EB1E4CD86C0016F8E1 /* GenerateSizes.swift in Sources */,
