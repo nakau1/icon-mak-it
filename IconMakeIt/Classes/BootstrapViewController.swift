@@ -20,7 +20,7 @@ class BootstrapViewController: NBLandingViewController {
                     self.present(SettingViewController.create())
                 },
                 NBLandingItem("GoogleDrive") {
-                    self.present(GoogleDriveViewController.create())
+                    GoogleDriveViewController.show(self)
                 },
                 NBLandingItem("チュートリアル") {
                     self.present(TutorialViewController.create())
