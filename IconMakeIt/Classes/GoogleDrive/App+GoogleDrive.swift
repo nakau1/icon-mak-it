@@ -27,6 +27,8 @@ extension App {
 extension App.Google.Drive {
     
     static let folderMimeType = "application/vnd.google-apps.folder"
+    static let rootFolderID   = "root"
+    static let rootFolderName = "ルートフォルダ"
 }
 
 // MARK: - GTLDriveFile拡張 -

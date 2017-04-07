@@ -424,26 +424,38 @@ extension DetailViewController {
         async(async: {
             let namesAndImages = self.generateNamesAndImages()
             
-            // デバッグ
-            for (name, image) in namesAndImages {
-                let _ = NBFile.documentDirectory.name(name + ".png").saveImageAsPNG(image)
+            if App.Config.GoogleDrive.shouldSelectGoogleDriveFolder {
+                
             }
-            print(NBFile.documentDirectory.path)
+            
+            
+            
+            // デバッグ
+//            for (name, image) in namesAndImages {
+//                let _ = NBFile.documentDirectory.name(name + ".png").saveImageAsPNG(image)
+//            }
+//            print(NBFile.documentDirectory.path)
             
         }, completed: {
             
         })
     }
     
+    private func f() {
+        GoogleDriveViewController.show(self, selected: { folderName, folderID in
+        
+        })
+    }
+    
     private func generateNamesAndImages() -> [String : UIImage] {
-        let gen = ImageGenerator(
+        let generator = ImageGenerator(
             iconFontSet:     App.Config.Latest.iconFont.set,
             iconColor:       App.Config.ThemeColor.iconColor,
             backgroundColor: App.Config.ThemeColor.backgroundColor,
             size:            App.Config.Latest.imageSize.f,
             style:           App.Config.Latest.iconImageStyle
         )
-        let ret = gen.generate(
+        let ret = generator.generate(
             text:     self.item.text,
             fileName: "\(self.prefix)\(self.fileName)\(self.suffix)".trim(),
             sizes:    App.Config.Latest.generateSizes

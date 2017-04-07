@@ -16,17 +16,21 @@ extension App.Google.Drive {
         let file:             GTLDriveFile!
         let uploadParameters: GTLUploadParameters!
         
-        init(image: UIImage, name: String, folder: GTLDriveFile) {
+        init(image: UIImage, name: String, folderID: String) {
             self.file = GTLDriveFile()
             self.file.name                = name
             self.file.mimeType            = "image/png"
             self.file.descriptionProperty = "Uploaded form IconMakeIt"
-            self.file.parents             = [folder.identifier]
+            self.file.parents             = [folderID]
             
             self.uploadParameters = GTLUploadParameters(
                 data:     UIImagePNGRepresentation(image)!,
                 mimeType: self.file.mimeType
             )
+        }
+        
+        convenience init(image: UIImage, name: String, folder: GTLDriveFile) {
+            self.init(image: image, name: name, folderID: folder.identifier)
         }
         
         func query() -> GTLQuery {

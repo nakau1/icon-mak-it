@@ -10,11 +10,12 @@ import NeroBlu
 /// GoogleDrive設定の永続保存データクラス
 class GoogleDriveConfig: NBUserDefaults {
     
-//    /// 最後に使用したフォルダのID
-//    dynamic var latestGoogleDriveFolderID = GoogleDriveApiRequest.rootFolder
-//    /// 最後に使用したフォルダ名
-//    dynamic var latestGoogleDriveFolderName = GoogleDriveApiRequest.rootFolderName
-//    
+    /// 最後に使用したフォルダのID
+    dynamic var latestFolderID = ""
+    
+    /// 最後に使用したフォルダ名
+    dynamic var latestFolderName = ""
+    
     /// 保存ごとにGoogleDriveのフォルダを選択させるかどうか
     dynamic var shouldSelectGoogleDriveFolder = true
 }
