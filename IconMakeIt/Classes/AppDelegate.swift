@@ -4,6 +4,7 @@
  */
 import UIKit
 import AppAuth
+import NeroBlu
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,5 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return true
         }
         return false
+    }
+    
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        App.Notify.post(to: .willEnterForeground)
     }
 }

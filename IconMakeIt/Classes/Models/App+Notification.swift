@@ -21,6 +21,8 @@ extension App.Notify {
         case SelectEditSuffix
         case SelectGuide
         case SelectLicence
+        
+        case willEnterForeground
     }
 
     /// 通知アイテムの送信

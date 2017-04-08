@@ -95,9 +95,9 @@ class GoogleDriveViewController: UIViewController, UIGestureRecognizerDelegate {
     
     /// テーブルビューのセットアップ
     private func setupTableView() {
-        self.adapter = GoogleDriveTableViewController(selectedHandler: { [unowned self] file in
+        self.adapter = GoogleDriveTableViewController(selectedHandler: { [unowned self] folder in
             self.enabledUseButton = false
-            //self.push(GoogleDriveViewController.create(file: file))
+            self.push(GoogleDriveViewController.create(folder: folder))
         })
         self.adapter.setup(self.tableView)
     }
@@ -166,21 +166,21 @@ class GoogleDriveViewController: UIViewController, UIGestureRecognizerDelegate {
     
     /// 通知監視の開始／停止
     private func observeNotification(_ start: Bool) {
-//        let items: [App.Notify.Item : String] = [
-//            .ChangeIconFont        : "didChangeIconFont",
-//            .ChangeIconColor       : "didChangeIconColor",
-//            .ChangeBackgroundColor : "didChangeBackgroundColor",
-//            ]
-//        if start {
-//            App.Notify.addItems(self, items)
-//        } else {
-//            App.Notify.removeItems(self, items.map { $0.key })
-//        }
+        let items: [App.Notify.Item : String] = [
+            .willEnterForeground : "applicationWillEnterForeground",
+            ]
+        if start {
+            App.Notify.addItems(self, items)
+        } else {
+            App.Notify.removeItems(self, items.map { $0.key })
+        }
     }
     
-    /// アイコンフォント変更時
-    @objc private func didChangeIconFont() {
-        //self.adapter!.reload()
+    /// アプリケーションがフォアグラウンドに入る時
+    @objc private func applicationWillEnterForeground() {
+        if let vc = self.navigationController?.topViewController, vc == self {
+            self.reload()
+        }
     }
     
     // MARK: - 汎用処理
