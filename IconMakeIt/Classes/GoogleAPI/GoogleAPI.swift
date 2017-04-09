@@ -87,14 +87,15 @@ class GoogleAPI {
         }
     }
     
+    /// 認証済みかどうか
+    var isAuthorized: Bool {
+        self.loadAuthorization()
+        return self.existsAuthorization()
+    }
+    
     /// 認証されたメールアドレス
     var userEmail: String? {
-        self.loadAuthorization()
-        
-        if self.existsAuthorization() {
-            return self.service.authorizer.userEmail
-        }
-        return nil
+        return self.isAuthorized ? self.service.authorizer.userEmail : nil
     }
         
     // MARK: - 認証
@@ -136,7 +137,7 @@ class GoogleAPI {
                         handler(.failed(Error("")))
                     }
                 } else {
-                    let err = (error as? NSError) ?? Error("unkonwn error.")
+                    let err = Error(error?.localizedDescription ?? "unkonwn error.")
                     self.setAuthorization(nil)
                     handler(.failed(err))
                 }

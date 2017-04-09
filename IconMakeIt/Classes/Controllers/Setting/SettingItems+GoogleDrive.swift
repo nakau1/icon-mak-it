@@ -28,9 +28,9 @@ class SettingSectionGoogleDrive: SettingSectionBehavable {
             
             switch self {
             case .account:
-                ret.subText = "アカウント名"
+                ret.subText = App.Google.DriveAPI.userEmail ?? "(未認証)".localize()
             case .directory:
-                ret.subText = "ディレクトリ名"
+                ret.subText = App.Google.DriveAPI.isAuthorized ? App.Config.GoogleDrive.latestFolderName : "(未認証)".localize()
             case .selectEverytime: ret.checked = App.Config.GoogleDrive.shouldSelectGoogleDriveFolder
             default: break
             }
@@ -58,14 +58,52 @@ class SettingSectionGoogleDrive: SettingSectionBehavable {
         
         switch Row.items[index] {
         case .account:
-            break
+            self.login()
         case .directory:
             break
         case .selectEverytime:
             let _ = App.Config.GoogleDrive.shouldSelectGoogleDriveFolder.reverse()
-            break
         case .logout:
-            break
+            self.logout()
+        }
+    }
+    
+    /// ログイン処理
+    private func login() {
+        let vc = App.System.TopViewController!
+        if App.Google.DriveAPI.isAuthorized {
+            NBAlert.show(OK: vc, message: "アカウントを変更するには、まずログアウトを行ってください".localize())
+        } else {
+            App.Google.DriveAPI.authorize(vc) { state in
+                if !state.ok {
+                    NBAlert.show(OK: vc, message: "認証されませんでした".localize())
+                    return
+                }
+                self.reload()
+            }
+        }
+    }
+    
+    /// ログアウト処理
+    private func logout() {
+        let vc = App.System.TopViewController!
+        if App.Google.DriveAPI.isAuthorized {
+            NBAlert.show(YesNo: vc, message: "本当にログアウトしますか?".localize()) {
+                App.Google.DriveAPI.logoutAuthorization()
+                App.Config.GoogleDrive.latestFolderID   = App.Google.Drive.rootFolderID
+                App.Config.GoogleDrive.latestFolderName = App.Google.Drive.rootFolderName
+                NBAlert.show(OK: vc, message: "ログアウトしました".localize())
+                self.reload()
+            }
+        } else {
+            NBAlert.show(OK: vc, message: "現在アカウントの認証はされていません".localize())
+        }
+    }
+    
+    private func reload() {
+        print(App.System.TopViewController)
+        if let vc = App.System.TopViewController as? SettingViewController {
+            vc.adapter.reload()
         }
     }
 }

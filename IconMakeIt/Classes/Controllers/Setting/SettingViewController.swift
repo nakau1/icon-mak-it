@@ -12,7 +12,7 @@ class SettingViewController: UIViewController {
     
     @IBOutlet fileprivate weak var tableView: UITableView!
     
-    fileprivate var adapter: SettingTableViewController!
+    fileprivate(set) var adapter: SettingTableViewController!
     
     /// 自身のインスタンスを生成する
     /// - returns: 新しい自身のインスタンス
@@ -114,6 +114,10 @@ class SettingTableViewController: NBTableViewController {
         SettingSectionOther(),
         ]
     
+    func reload() {
+        self.tableView?.reloadData()
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return self.sections.count
     }
@@ -192,3 +196,13 @@ protocol SettingSectionBehavable {
     /// - parameter index: インデックス
     func didSelectItem(at index: Int)
 }
+
+extension SettingSectionBehavable {
+    
+    var parent: SettingViewController! {
+        return App.System.TopViewController as! SettingViewController
+    }
+}
+
+
+
