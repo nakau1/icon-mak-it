@@ -6,7 +6,7 @@ import UIKit
 import NeroBlu
 
 /// 設定セクション: ファイル名
-class SettingSectionFileName: SettingSectionBehavable {
+class SettingSectionFileName: SettingSection {
     
     enum Row {
         case storeName
@@ -37,18 +37,18 @@ class SettingSectionFileName: SettingSectionBehavable {
     }
 
     /// セクションタイトル
-    var title: String {
+    override var title: String {
         return "File Name".localize()
     }
     
     /// 項目の配列
-    var items: [SettingItem] {
+    override var items: [SettingItem] {
         return Row.items.map { $0.item }
     }
     
     /// 項目が選択された時の処理
     /// - parameter index: インデックス
-    func didSelectItem(at index: Int) {
+    override func didSelectItem(at index: Int) {
         switch Row.items[index] {
         case .storeName:  let _ = App.Config.Default.shouldUseLatestFileName.reverse()
         case .editPrefix: App.Notify.post(to: .SelectEditPrefix)

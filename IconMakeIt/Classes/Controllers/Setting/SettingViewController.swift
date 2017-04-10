@@ -103,7 +103,7 @@ class SettingViewController: UIViewController {
 /// 設定画面テーブルビューコントローラ
 class SettingTableViewController: NBTableViewController {
     
-    let sections: [SettingSectionBehavable] = [
+    let sections: [SettingSection] = [
         SettingSectionIconFont(),
         SettingSectionGenerateSizes(),
         SettingSectionColor(),
@@ -181,23 +181,20 @@ class SettingItem {
     }
 }
 
-// MARK: - SettingSectionBehavable -
+// MARK: - SettingSection -
 
-/// 設定セクションとして振る舞うプロトコル
-protocol SettingSectionBehavable {
+/// 設定項目セクションと
+class SettingSection {
     
     /// セクションタイトル
-    var title: String { get }
+    var title: String { return "" }
     
     /// 項目の配列
-    var items: [SettingItem] { get }
+    var items: [SettingItem] { return [] }
     
     /// 項目が選択された時の処理
     /// - parameter index: インデックス
-    func didSelectItem(at index: Int)
-}
-
-extension SettingSectionBehavable {
+    func didSelectItem(at index: Int) {}
     
     var parent: SettingViewController! {
         return App.System.TopViewController as! SettingViewController

@@ -6,7 +6,7 @@ import UIKit
 import NeroBlu
 
 /// 設定セクション: その他
-class SettingSectionOther: SettingSectionBehavable {
+class SettingSectionOther: SettingSection {
     
     enum Row {
         case guide
@@ -23,10 +23,10 @@ class SettingSectionOther: SettingSectionBehavable {
     }
 
     /// セクションタイトル
-    var title: String { return "" }
+    override var title: String { return "" }
     
     /// 項目の配列
-    var items: [SettingItem] {
+    override var items: [SettingItem] {
         return Row.items.map {
             let ret = SettingItem($0.name)
             ret.chevroned = true
@@ -36,7 +36,7 @@ class SettingSectionOther: SettingSectionBehavable {
     
     /// 項目が選択された時の処理
     /// - parameter index: インデックス
-    func didSelectItem(at index: Int) {
+    override func didSelectItem(at index: Int) {
         switch Row.items[index] {
         case .guide:   App.Notify.post(to: .SelectGuide)
         case .licence: App.Notify.post(to: .SelectLicence)

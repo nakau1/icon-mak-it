@@ -6,7 +6,7 @@ import UIKit
 import NeroBlu
 
 /// 設定セクション: 色
-class SettingSectionColor: SettingSectionBehavable {
+class SettingSectionColor: SettingSection {
     
     enum Row {
         case clearHistories
@@ -25,18 +25,18 @@ class SettingSectionColor: SettingSectionBehavable {
     }
     
     /// セクションタイトル
-    var title: String {
+    override var title: String {
         return "Color".localize()
     }
     
     /// 項目の配列
-    var items: [SettingItem] {
+    override var items: [SettingItem] {
         return Row.items.map { SettingItem($0.name) }
     }
     
     /// 項目が選択された時の処理
     /// - parameter index: インデックス
-    func didSelectItem(at index: Int) {
+    override func didSelectItem(at index: Int) {
         guard let vc = App.System.TopViewController else { return }
         
         switch Row.items[index] {

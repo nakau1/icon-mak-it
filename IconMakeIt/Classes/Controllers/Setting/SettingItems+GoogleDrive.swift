@@ -6,7 +6,7 @@ import UIKit
 import NeroBlu
 
 /// 設定セクション: GoogleDrive
-class SettingSectionGoogleDrive: SettingSectionBehavable {
+class SettingSectionGoogleDrive: SettingSection {
     
     enum Row {
         case account
@@ -42,18 +42,18 @@ class SettingSectionGoogleDrive: SettingSectionBehavable {
     }
 
     /// セクションタイトル
-    var title: String {
+    override var title: String {
         return "Google Drive".localize()
     }
     
     /// 項目の配列
-    var items: [SettingItem] {
+    override var items: [SettingItem] {
         return Row.items.map { $0.item }
     }
     
     /// 項目が選択された時の処理
     /// - parameter index: インデックス
-    func didSelectItem(at index: Int) {
+    override func didSelectItem(at index: Int) {
         guard App.System.TopViewController != nil else { return }
         
         switch Row.items[index] {
